@@ -15,8 +15,8 @@ I cannot guarantee the accuracy of this data. These data are digitized by hand, 
 **Pull requests welcome**
 ====
 
-Caitlin Rivers
-cmrivers@vbi.vt.edu
+Caitlin Rivers    
+cmrivers@vbi.vt.edu    
 [@cmyeaton](https://twitter.com/cmyeaton)
 
 
