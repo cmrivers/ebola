@@ -5,7 +5,7 @@ Data for the 2014 Ebola outbeak in West Africa
 
 * `country_timeseries.csv` contains a time series of case counts and deaths is from the [World Health Organization](http://www.who.int/csr/don/en/).
 * `Sierraleone_country.csv` and `SierraLeone_town.csv` is from the Sierra Leone Ministry of Health Facebook page.
-* `liberia_data/` contains .csv files of data provided by the [Liberia Ministry of Health (http://www.mohsw.gov.lr/).
+* `liberia_data/` contains .csv files of data provided by the [Liberia Ministry of Health](http://www.mohsw.gov.lr/).
 * `liberia_data.py` converts the liberia_data csv files into a multidimensional pandas dataframe. Pandas is a requirement for this script.
 
 ## Disclaimer
