@@ -13,6 +13,7 @@ Data for the 2014 Ebola outbeak in West Africa
 I cannot guarantee the accuracy of this data. These data are digitized by hand, so there may be data entry errors; there may also be changes and errors in the source data. I will provide updates when possible.
 
 **Pull requests welcome**
+====
 
 Caitlin Rivers
 cmrivers@vbi.vt.edu
