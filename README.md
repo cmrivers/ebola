@@ -10,7 +10,7 @@ Data for the 2014 Ebola outbeak in West Africa
 
 ## How to use
 
-If you are not familiar with Github, click the Download Zip button on the left, at the bottom of vertical menu.
+If you are not familiar with Github, click the Download Zip button on the right, at the bottom of vertical menu.
 
 ## Disclaimer
 
