@@ -12,6 +12,9 @@ from __future__ import division
 import pandas as pd
 import os
 import glob
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
 
 def dimensionalize_flatfiles():
     """
@@ -69,7 +72,6 @@ def interpolate_ts(df):
     cases = cases_reix.replace(0, np.nan).dropna(axis=1, how='all')
 
     return cases.interpolate()
-
 
 liberia = dimensionalize_flatfiles()
 
