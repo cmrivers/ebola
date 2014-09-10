@@ -12,6 +12,9 @@ from __future__ import division
 import pandas as pd
 import os
 import glob
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
 
 def dimensionalize_flatfiles():
     """
