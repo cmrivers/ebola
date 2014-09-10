@@ -73,7 +73,6 @@ def interpolate_ts(df):
 
     return cases.interpolate()
 
-
 liberia = dimensionalize_flatfiles()
 
 fig, ax = plt.subplots(figsize=(12, 8))
