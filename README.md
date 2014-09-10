@@ -1,6 +1,8 @@
 Data for the 2014 Ebola outbeak in West Africa
 =====
 
+![](http://dl.dropbox.com/u/47552986/Screenshots/sl.png)
+
 ## Contents
 
 * `country_timeseries.csv` contains a time series of case counts and deaths is from the [World Health Organization](http://www.who.int/csr/don/en/).
