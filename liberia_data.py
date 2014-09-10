@@ -15,6 +15,7 @@ import glob
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+import argparse
 
 def dimensionalize_flatfiles():
     """
@@ -73,9 +74,17 @@ def interpolate_ts(df):
 
     return cases.interpolate()
 
+parser = argparse.ArgumentParser(description="Collate Liberian Ebolia info to CSV or Visual Graph")
+parser.add_argument('--format', help="Which format would you like the data to be in? opts csv/graph (default=graph)", default="graph")
+args = parser.parse_args()
+
 liberia = dimensionalize_flatfiles()
 
 fig, ax = plt.subplots(figsize=(12, 8))
 total_cases = liberia.ix['total_suspected'] + liberia.ix['total_probable'] + liberia.ix['total_confirmed']
 totals = clean_sparse(total_cases)
-totals.plot(title='Cumulative case totals in affected Liberian counties', linewidth=2, ax=ax);
+
+if args.format == "graph":
+    totals.plot(title='Cumulative case totals in affected Liberian counties', linewidth=2, ax=ax);
+else:
+    print totals.to_csv()
