@@ -15,6 +15,8 @@ Data for the 2014 Ebola outbeak in West Africa
 
 If you are not familiar with Github, click the Download Zip button on the right, at the bottom of vertical menu.
 
+**Look at the [analyses/ebola_analyses.md](https://github.com/cmrivers/ebola/blob/master/analyses/ebola_analyses.md) file for community-contributd analyses.**
+
 ## Disclaimer
 
 I cannot guarantee the accuracy of this data. These data are digitized by hand, so there may be data entry errors; there may also be changes and errors in the source data. I will provide updates when possible.
@@ -24,7 +26,9 @@ I cannot guarantee the accuracy of this data. These data are digitized by hand, 
 ====
 
 Caitlin Rivers
+
 cmrivers@vbi.vt.edu
+
 [@cmyeaton](https://twitter.com/cmyeaton)
 
 
