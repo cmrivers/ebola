@@ -1,0 +1,51 @@
+case_id,exposure_date,onset_date,hospital_date,death_date,recovery_date,age,sex,country,sub_location,sub_sub_location,legrand,exposure,hcw,source_id,identifying_notes,source
+1,,2013-12-02,,2013-12-06,,child,,Guinea,Gueckedou,Meliandou,c,zoonotic,N,,,http://www.nejm.org/doi/full/10.1056/NEJMoa1404505
+2,,,,2013-12-13,,adult,F,Guinea,Gueckedou,Meliandou,c,family,N,1,mother,http://www.nejm.org/doi/full/10.1056/NEJMoa1404506
+3,,2013-12-25,,2013-12-27,,child,F,Guinea,Gueckedou,Meliandou,c,family,N,1,sister,http://www.nejm.org/doi/full/10.1056/NEJMoa1404507
+4,,,,2014-01-01,,elderly,F,Guinea,Gueckedou,,c,family,Y,1,grandmother,http://www.nejm.org/doi/full/10.1056/NEJMoa1404508
+5,,2014-01-29,,2014-01-31,,adult,F,Guinea,Gueckedou,,h,hcw,Y,1,nurse,http://www.nejm.org/doi/full/10.1056/NEJMoa1404509
+6,,,2014-01-25,2014-02-02,,adult,F,Guinea,Gueckedou,,h,hcw,Y,1,midwife,http://www.nejm.org/doi/full/10.1056/NEJMoa1404510
+7,2014-01-03,2014-01-20,,2014-01-26,,elderly,F,Guinea,Gueckedou,Dawa,f,funeral,N,4,sister,http://www.nejm.org/doi/full/10.1056/NEJMoa1404511
+8,2014-01-03,,,2014-01-31,,,,Guinea,Gueckedou,Dawa,f,funeral,N,4,funeral attendee,http://www.nejm.org/doi/full/10.1056/NEJMoa1404512
+9,,2014-02-04,,2014-02-11,,,,Guinea,Gueckedou,Dondou Pombo,c,family,N,6,family,http://www.nejm.org/doi/full/10.1056/NEJMoa1404513
+10,,2014-02-05,,2014-02-10,,adult,,Guinea,Gueckedou,,h,occupational,Y,6,hospital worker,http://www.nejm.org/doi/full/10.1056/NEJMoa1404514
+11,,,,2014-03-21,,elderly,F,Guinea,Gueckedou,,f,family,N,,MIL of hospital worker,http://www.nejm.org/doi/full/10.1056/NEJMoa1404515
+12,,2014-02-19,,2014-02-24,,adult,,Guinea,Macenta,,h,hcw,Y,10,doctor,http://www.nejm.org/doi/full/10.1056/NEJMoa1404516
+13,,,,2014-02-28,,adult,M,Guinea,Macenta,,c,family,N,12,family,http://www.nejm.org/doi/full/10.1056/NEJMoa1404517
+14,,2014-02-24,,2014-03-07,,,M,Guinea,Kissidougou,,c,contact,N,12,family,http://www.nejm.org/doi/full/10.1056/NEJMoa1404518
+15,,2014-02-24,,2014-03-08,,,M,Guinea,Kissidougou,,c,contact,N,12,family,http://www.nejm.org/doi/full/10.1056/NEJMoa1404519
+16,,2014-03-03,,2014-03-12,,,,Guinea,Macenta,,c,contact,N,12,contact,http://www.nejm.org/doi/full/10.1056/NEJMoa1404520
+17,,,2014-03-06,2014-03-16,,,,Guinea,Macenta,,c,contact,N,13,contact,http://www.nejm.org/doi/full/10.1056/NEJMoa1404521
+18,,,,2014-04-01,,,,Guinea,Conakry,,,,,,unknown,http://www.afro.who.int/en/clusters-a-programmes/dpc/epidemic-a-pandemic-alert-and-response/outbreak-news/4095-ebola-virus-disease-west-africa-14-april-2014.html
+19,,,2014-04-12,,,,,Guinea,Conakry,,f,funeral,,18,funeral attendee,http://www.afro.who.int/en/clusters-a-programmes/dpc/epidemic-a-pandemic-alert-and-response/outbreak-news/4095-ebola-virus-disease-west-africa-14-april-2014.html
+20,,,2014-04-12,,,,,Guinea,Conakry,,f,funeral,,18,funeral attendee,http://www.afro.who.int/en/clusters-a-programmes/dpc/epidemic-a-pandemic-alert-and-response/outbreak-news/4095-ebola-virus-disease-west-africa-14-april-2014.html
+21,,,2014-04-13,,,adult,,Guinea,Conakry,,h,hcw,Y,18,doctor,http://www.afro.who.int/en/clusters-a-programmes/dpc/epidemic-a-pandemic-alert-and-response/outbreak-news/4095-ebola-virus-disease-west-africa-14-april-2014.html
+22,,,2014-07-20,2014-07-25,,adult,M,Nigeria,Lagos,,c,family,N,29,"lagos import, sawyer",http://www.who.int/mediacentre/news/ebola/3-september-2014/en/
+23,,2014-08-11,2014-08-16,2014-08-22,,adult,M,Nigeria,Port Harcourt,,c,contact,Y,22,port harcourt import,http://www.who.int/mediacentre/news/ebola/3-september-2014/en/
+24,,,,,2014-09-10,adult,F,Nigeria,Port Harcourt,,c,family,Y,23,wife of PH,http://www.who.int/mediacentre/news/ebola/3-september-2014/en/
+25,,,,,,adult,,Nigeria,Port Harcourt,,h,nosocomial,N,23,patient of PH import,http://www.who.int/mediacentre/news/ebola/3-september-2014/en/
+26,,,,2014-08-22,,adult,M,Nigeria,Lagos,,h,hcw,Y,22,"hcw, PH",http://www.cbsnews.com/news/ebola-spreads-in-nigeria-2-new-cases-unconnected-to-patrick-sawyer/
+27,,,,2014-08-22,,adult,F,Nigeria,Lagos,,h,hcw,Y,22,"hcw, PH",http://www.cbsnews.com/news/ebola-spreads-in-nigeria-2-new-cases-unconnected-to-patrick-sawyer/
+28,,,,2014-08-06,,,,Nigeria,Lagos,,h,hcw,Y,22,"nurse, second sawyer linked HCW to die",http://www.nbcnews.com/storyline/ebola-virus-outbreak/nigerian-nurse-who-treated-american-patrick-sawyer-dies-ebola-n173786
+29,,,,2014-07-07,,adult,F,Liberia,Monrovia,,c,family,N,,sawyer's sister,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+30,,,,,,adult,,Nigeria,Lagos,,h,hcw,Y,22,nurse,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+31,,,,,,adult,F,Nigeria,Lagos,,h,hcw,N,30,nursing mother,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+32,,,,,,adult,F,Nigeria,Lagos,,h,hcw,Y,22,nurse,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+33,,,,2014-08-07,,adult,M,Liberia,Monrovia,,c,contact,N,29,"hospital admin, sawyers sister",http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+34,,,,,,adult,F,Liberia,Monrovia,,h,contact,Y,33,social worker,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+35,,,,2014-08-12,,elderly,M,Liberia,Monrovia,,h,contact,Y,33,spanish priest,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+36,,,,,,,,Liberia,Monrovia,,h,,Y,33, ,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+37,,,,,,,,Liberia,Monrovia,,h,,Y,33,,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+38,,,,,,,,Liberia,Monrovia,,h,,Y,33,,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+39,,,,,,,,Liberia,Monrovia,,h,,Y,33,,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+40,,,,,,,,Liberia,Monrovia,,h,,Y,33,,http://www.thedailybeast.com/articles/2014/08/14/how-bureaucrats-let-ebola-spread-to-nigeria.html
+41,,,,2014-08-19,,adult,F,Nigeria,Lagos,,h,hcw,Y,22,"doctor, treated sawyer",
+42,,,,,2014-08-17,adult,M,Nigeria,Lagos,,h,hcw,Y,22,"doctor, treated sawyer",http://www.health.gov.ng/index.php/news-media/press-releases/9-uncategorised/188-four-additional-ebola-patients-discharged-home
+43,,,,,2014-08-17,adult,M,Nigeria,Lagos,,h,hcw,Y,22,"doctor, treated sawyer",http://www.health.gov.ng/index.php/news-media/press-releases/9-uncategorised/188-four-additional-ebola-patients-discharged-home
+44,,,,,2014-08-17,adult,F,Nigeria,Lagos,,h,hcw,Y,22,"nurse, treated saywer",http://www.health.gov.ng/index.php/news-media/press-releases/9-uncategorised/188-four-additional-ebola-patients-discharged-home
+45,,,,,2014-08-17,adult,F,Nigeria,Lagos,,h,nosocomial,N,22,patient with sawyer,http://www.health.gov.ng/index.php/news-media/press-releases/9-uncategorised/188-four-additional-ebola-patients-discharged-home
+46,,,,,,adult,,Nigeria,Lagos,,h,hcw,Y,22,,
+47,,,,,,adult,,Nigeria,Lagos,,h,hcw,Y,22,,
+48,,,2014-08-22,,,adult,,Nigeria,Lagos,,c,family,,,spouse of HCW of Sawyer,
+49,,,2014-08-22,,,adult,,Nigeria,Lagos,,c,family,,,spouse of HCW of Sawyer,
+50,,,,2014-09-07,,adult,F,Nigeria,Port Harcourt,,c,family,N,23,sister of PH import,
