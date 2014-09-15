@@ -17,3 +17,10 @@ Below is a [case tree plot(http://cmrivers.github.io/epipy/) of two well-describ
 ![epicurves](https://github.com/cmrivers/ebola/blob/master/analyses/casetree.png)
 
 ________
+@arsenovic
+
+Analyses available at:
+http://nbviewer.ipython.org/gist/arsenovic/d44166390b50f9f15df3
+
+and code:
+https://gist.github.com/d44166390b50f9f15df3
