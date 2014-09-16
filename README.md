@@ -11,11 +11,15 @@ Data for the 2014 Ebola outbeak in West Africa
 * `Sierraleone_country.csv` and `SierraLeone_town.csv` is from the Sierra Leone Ministry of Health [website](http://health.gov.sl/). Data in `SierraLeone_town.csv` is cumlative confirmed cases - counts do not include suspected or probable cases. These spreadsheets will no longer be updated as of Sept 12 (newer data can be found in the sl_data/* files), but pull requests will be accepted.
 
 ![Epicurves](https://github.com/cmrivers/ebola/blob/master/analyses/liberia_cumulative.png)
+
+## Contribute
+The analysis folder and [analyses/ebola_analyses.md](https://github.com/cmrivers/ebola/blob/master/analyses/ebola_analyses.md) file contains community-contributed analyses. If you have something to contribute, send a pull request or email.
+
 ## How to use
 
 If you are not familiar with Github, click the Download Zip button on the right, at the bottom of vertical menu.
 
-**Look at the [analyses/ebola_analyses.md](https://github.com/cmrivers/ebola/blob/master/analyses/ebola_analyses.md) file for community-contributd analyses.**
+
 
 ## Disclaimer
 
