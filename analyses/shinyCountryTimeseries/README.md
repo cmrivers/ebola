@@ -3,8 +3,12 @@ ui.R and server.R scripts, open up R such that the `getwd()` is the
 parent directory. Then load shiny, by using `library(shiny)` and then
 launch the application by typing `runApp("shiny-country-timeseries")`
 
-The app requires the following R packages to be installed: RCurl,
+The app requires the following R packages to be installed: RCurl, foreign,
 ggplot2, stringr, reshape2, magrittr, dplyr, scales, shiny
+
+It can be installed in R via:
+
+`install.packages(c("RCurl", "foreign", "ggplot2", "stringr", "reshape2", "magrittr", "dplyr", "scales", "shiny"))`
 
 The app can also be viewed online by visiting:
 https://chendaniely.shinyapps.io/shinyCountryTimeseries/
