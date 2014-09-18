@@ -35,10 +35,13 @@ for(i in 2:ncol(df1_noDate)){
 row.names(df3_merge) <- df3_merge$day
 df3_merge <- df3_merge[, names(df3_merge) != "day"]
 
-df4 <- df3_merge %>%
-    as.matrix() %>%
-        t() %>%
-            as.data.frame()
+#df4 <- df3_merge %>%
+#    as.matrix() %>%
+#        t() %>%
+#            as.data.frame()
+
+df4 <- as.data.frame(t(as.matrix(df3_merge)))
+
 vars <- colsplit(row.names(df4), "_", c("type", "place"))
 df4 <- cbind(vars, df4)
 row.names(df4) <- NULL
