@@ -15,27 +15,27 @@ url <- "https://raw.githubusercontent.com/cmrivers/ebola/master/country_timeseri
 data <- getURL(url, ssl.verifypeer = FALSE)
 df <- read.csv(textConnection(data))
 
-df1.noDate <- df[, !names(df) %in% c("Date")]
-day <- c(0:df1.noDate[1, 1])
-df3.merge <- data.frame(day)
+df1_noDate <- df[, !names(df) %in% c("Date")]
+day <- c(0:df1_noDate[1, 1])
+df3_merge <- data.frame(day)
 
-for(i in 2:ncol(df1.noDate)){
-  df.temp <- df1.noDate[, c(1, i)]
-  df.temp <- na.omit(df.temp)
-  last <- nrow(df.temp)
+for(i in 2:ncol(df1_noDate)){
+  df_temp <- df1_noDate[, c(1, i)]
+  df_temp <- na.omit(df_temp)
+  last <- nrow(df_temp)
   last
-  df.temp[last,1]
-  day.offset <- df.temp[last,1]
-  df.temp$day.adj <- df.temp$Day - day.offset
-  df.temp
-  df3.merge <- merge(x = df3.merge, y = df.temp[, names(df.temp) != "Day"],
+  df_temp[last,1]
+  day.offset <- df_temp[last,1]
+  df_temp$day.adj <- df_temp$Day - day.offset
+  df_temp
+  df3_merge <- merge(x = df3_merge, y = df_temp[, names(df_temp) != "Day"],
                      by.x = "day", by.y = "day.adj", all.x = TRUE)
 }
 
-row.names(df3.merge) <- df3.merge$day
-df3.merge <- df3.merge[, names(df3.merge) != "day"]
+row.names(df3_merge) <- df3_merge$day
+df3_merge <- df3_merge[, names(df3_merge) != "day"]
 
-df4 <- df3.merge %>%
+df4 <- df3_merge %>%
     as.matrix() %>%
         t() %>%
             as.data.frame()
@@ -43,24 +43,24 @@ vars <- colsplit(row.names(df4), "_", c("type", "place"))
 df4 <- cbind(vars, df4)
 row.names(df4) <- NULL
 
-df5.melt <- melt(df4)
-names(df5.melt) <- c("type", "place", "day", "count")
-df5.melt$type[df5.melt$type == "Case"] <- "Cases"
+df5_melt <- melt(df4)
+names(df5_melt) <- c("type", "place", "day", "count")
+df5_melt$type[df5_melt$type == "Case"] <- "Cases"
 
 
 
 shinyServer(function(input, output) {
 
-  data.plot <- reactive({
-    df.plot <- df5.melt[!is.na(df5.melt$count), ]
+  data_plot <- reactive({
+    df_plot <- df5_melt[!is.na(df5_melt$count), ]
     all <- c("Guinea", "Liberia", "SierraLeone", "Nigeria", "Senegal")
     if(input$countries == "All"){selection <- all}
     else{selection <- input$countries}
-    df.plot <- df.plot[df.plot$place %in% selection, ]
+    df_plot <- df_plot[df_plot$place %in% selection, ]
   })
 
   plot <- reactive({
-    g <- ggplot(data = data.plot(),
+    g <- ggplot(data = data_plot(),
                 aes(x = as.numeric(day), y = as.numeric(count),
                     group = place, color = place)) +
                         geom_point() + geom_line()+
