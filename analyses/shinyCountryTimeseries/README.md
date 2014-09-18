@@ -10,3 +10,14 @@ The app can also be viewed online by visiting:
 https://chendaniely.shinyapps.io/shinyCountryTimeseries/
 
 Except it's not working right now and I don't know why.
+
+TODO
+====
+I have a few ideas on how to build out the plot further:
+
+* Overlay R0 curves over the cases plots
+  * Give sliders to adjust initial number of cases and R0
+
+* Overlay other pandemic curves in cases/deaths for comparison
+
+Additional suggestions and datasets welcome!
