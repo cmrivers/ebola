@@ -5,3 +5,8 @@ launch the application by typing `runApp("shiny-country-timeseries")`
 
 The app requires the following R packages to be installed: RCurl,
 ggplot2, stringr, reshape2, dplyr, scales, shiny
+
+The app can also be viewed online by visiting:
+https://chendaniely.shinyapps.io/shinyCountryTimeseries/
+
+Except it's not working right now and I don't know why.
