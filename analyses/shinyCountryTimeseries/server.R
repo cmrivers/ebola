@@ -8,9 +8,12 @@ library(magrittr)
 library(dplyr)
 library(scales)
 library(shiny)
+library(foreign)
 
-data <- getURL("https://raw.githubusercontent.com/cmrivers/ebola/master/country_timeseries.csv")
-df <- read.csv(text = data)
+url <- "https://raw.githubusercontent.com/cmrivers/ebola/master/country_timeseries.csv"
+
+data <- getURL(url, ssl.verifypeer = FALSE)
+df <- read.csv(textConnection(data))
 
 df1.noDate <- df[, !names(df) %in% c("Date")]
 day <- c(0:df1.noDate[1, 1])
