@@ -1,5 +1,11 @@
+
 The app can also be viewed online by visiting:
 https://chendaniely.shinyapps.io/shinyCountryTimeseries/
+
+**Please** send issues and pull requests to the `dev-dan-shiny` branch in Dan's
+[fork](https://github.com/chendaniely/ebola) so
+[Caitlin](https://github.com/cmrivers/ebola) doesn't get bombarded
+with PR requests...
 
 The app requires the following R packages to be installed: RCurl, foreign,
 ggplot2, stringr, reshape2, magrittr, dplyr, scales, shiny
