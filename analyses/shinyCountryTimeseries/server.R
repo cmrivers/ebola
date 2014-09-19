@@ -70,14 +70,14 @@ shinyServer(function(input, output) {
                             facet_grid(~ type) +
                                 scale_x_continuous(name="Days after first report") +
                                     scale_y_continuous(name="Counts") +
-                                        ggtitle("Number of obserations for days after first report")
+                                        ggtitle("Number of observations for days after first report")
 
     if(!input$log){
       return(g)
     } else{
       h <- g + scale_y_continuous(trans=log10_trans()) +
           scale_y_log10(name="Counts") +
-              ggtitle("Number of obserations for days after first report (log10 scale)")
+              ggtitle("Number of observations for days after first report (log10 scale)")
       return(h)
     }
   })
