@@ -1,116 +1,226 @@
-{
-  "locations": [
-    {
-      "country": "Liberia",
-      "address": "Bomi County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Bong County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Gbarpolu County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Grand Bassa"
-    },
-    {
-      "country": "Liberia",
-      "address": "Grand Cape Mount"
-    },
-    {
-      "country": "Liberia",
-      "address": "Grand Gedeh"
-    },
-    {
-      "country": "Liberia",
-      "address": "Grand Kru County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Lofa County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Margibi County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Maryland County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Margibi County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Montserrado County"
-    },
-    {
-      "country": "Liberia",
-      "address": "Nimba County"
-    },
-    {
-      "country": "Liberia",
-      "address": "RiverCess County"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Kailahun"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Kenema"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Kono"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Kambia"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Koinadugu"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Bombali"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Tonkolili"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Port Loko"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Pujehun"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Bo"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Moyamba"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Bonthe"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Western area urban district"
-    },
-    {
-      "country": "Sierra Leone",
-      "address": "Western area rural district"
+[
+  {
+    "address": "Bomi County",
+    "country": "Liberia",
+    "location": {
+      "lat" : 6.7562926,
+      "lng" : -10.8451467
     }
-  ]
-}
+  },
+  {
+    "address": "Bong County",
+    "country": "Liberia",
+    "location": {
+      "lat": 6.829501899999999,
+      "lng": -9.367308399999999
+    }
+  },
+  {
+    "address": "Gbarpolu County",
+    "country": "Liberia",
+    "location": {
+      "lat": 7.495263700000001,
+      "lng": -10.0807298
+    }
+  },
+  {
+    "address": "Grand Bassa",
+    "country": "Liberia",
+    "location": {
+      "lat": 6.2308452,
+      "lng": -9.8124935
+    }
+  },
+  {
+    "address": "Grand Cape Mount",
+    "country": "Liberia",
+    "location": {
+      "lat": 7.0467758,
+      "lng": -11.0711758
+    }
+  },
+  {
+    "address": "Grand Gedeh",
+    "country": "Liberia",
+    "location": {
+      "lat": 5.9222078,
+      "lng": -8.2212979
+    }
+  },
+  {
+    "address": "Grand Kru County",
+    "country": "Liberia",
+    "location": {
+      "lat": 4.7613862,
+      "lng": -8.2212979
+    }
+  },
+  {
+    "address": "Lofa County",
+    "country": "Liberia",
+    "location": {
+      "lat": 8.191118399999999,
+      "lng": -9.7232673
+    }
+  },
+  {
+    "address": "Margibi County",
+    "country": "Liberia",
+    "location": {
+      "lat": 6.5151875,
+      "lng": -10.3048897
+    }
+  },
+  {
+    "address": "Maryland County",
+    "country": "Liberia",
+    "location": {
+      "lat": 4.7258878,
+      "lng": -7.741670300000001
+    }
+  },
+  {
+    "address": "Margibi County",
+    "country": "Liberia",
+    "location": {
+      "lat": 6.5151875,
+      "lng": -10.3048897
+    }
+  },
+  {
+    "address": "Montserrado County",
+    "country": "Liberia",
+    "location": {
+      "lat": 6.5525815,
+      "lng": -10.5296115
+    }
+  },
+  {
+    "address": "Nimba County",
+    "country": "Liberia",
+    "location": {
+      "lat": 6.8427612,
+      "lng": -8.6600586
+    }
+  },
+  {
+    "address": "RiverCess County",
+    "country": "Liberia",
+    "location": {
+      "lat": 5.902532799999999,
+      "lng": -9.456155
+    }
+  },
+  {
+    "address": "Kailahun",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.277222,
+      "lng": -10.573889
+    }
+  },
+  {
+    "address": "Kenema",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 7.863214699999999,
+      "lng": -11.1957172
+    }
+  },
+  {
+    "address": "Kono",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.7663285,
+      "lng": -10.8903099
+    }
+  },
+  {
+    "address": "Kambia",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 9.126166399999999,
+      "lng": -12.9176518
+    }
+  },
+  {
+    "address": "Koinadugu",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 9.5168769,
+      "lng": -11.36363
+    }
+  },
+  {
+    "address": "Bombali",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 9.2475837,
+      "lng": -12.1632718
+    }
+  },
+  {
+    "address": "Tonkolili",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.9804274,
+      "lng": -11.7947561
+    }
+  },
+  {
+    "address": "Port Loko",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.766667,
+      "lng": -12.7875
+    }
+  },
+  {
+    "address": "Pujehun",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 7.350556,
+      "lng": -11.718056
+    }
+  },
+  {
+    "address": "Bo",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 7.9551791,
+      "lng": -11.7409946
+    }
+  },
+  {
+    "address": "Moyamba",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.160556,
+      "lng": -12.433333
+    }
+  },
+  {
+    "address": "Bonthe",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 7.526389,
+      "lng": -12.505
+    }
+  },
+  {
+    "address": "Western area urban district",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.4545561,
+      "lng": -13.2432632
+    }
+  },
+  {
+    "address": "Western area rural district",
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.3114983,
+      "lng": -13.035694
+    }
+  }
+]
