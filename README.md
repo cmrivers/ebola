@@ -22,21 +22,18 @@ The analysis folder and [analyses/ebola_analyses.md](https://github.com/cmrivers
 
 If you are not familiar with Github, click the Download Zip button on the right, at the bottom of vertical menu.
 
-
-
 ## Disclaimer
 
 I cannot guarantee the accuracy of this data. These data are digitized by hand, so there may be data entry errors; there may also be changes and errors in the source data. I will provide updates when possible.
 
 **Pull requests welcome.**
 
-====
+## Contact
 
-Caitlin Rivers
+I am **Caitlin Rivers**, a scholar in computational epidemiology at Virginia Tech. You can reach me at:
+* cmrivers@vbi.vt.edu
+* [@cmyeaton](https://twitter.com/cmyeaton)
 
-cmrivers@vbi.vt.edu
-
-[@cmyeaton](https://twitter.com/cmyeaton)
-
+*Please note*: I receive numerous requests every day for customized versions of these data. While I appreciate that these data are in demand and am glad they are useful to you, I simply do not have time to provide customized versions.
 
 
