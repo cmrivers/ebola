@@ -1,10 +1,52 @@
 [
   {
+    "country": "Guinea",
+    "location": {
+      "lat": 9.945587,
+      "lng": -9.696645
+    }
+  },
+  {
+    "country": "Liberia",
+    "location": {
+      "lat": 6.428055,
+      "lng": -9.429499000000002
+    }
+  },
+  {
+    "country": "Sierra Leone",
+    "location": {
+      "lat": 8.460555,
+      "lng": -11.779889
+    }
+  },
+  {
+    "country": "Nigeria",
+    "location": {
+      "lat": 9.081999,
+      "lng": 8.675277
+    }
+  },
+  {
+    "country": "Nigeria",
+    "location": {
+      "lat": 9.081999,
+      "lng": 8.675277
+    }
+  },
+  {
+    "country": "Senegal",
+    "location": {
+      "lat": 14.497401,
+      "lng": -14.452362
+    }
+  },
+  {
     "address": "Bomi County",
     "country": "Liberia",
     "location": {
-      "lat" : 6.7562926,
-      "lng" : -10.8451467
+      "lat": 6.7562926,
+      "lng": -10.8451467
     }
   },
   {
