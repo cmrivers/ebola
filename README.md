@@ -16,6 +16,8 @@ Data for the 2014 Ebola outbeak in West Africa
 
 ![Epicurves](https://github.com/cmrivers/ebola/blob/master/analyses/liberia_cumulative.png)
 
+* `major_events.json` contains major announcements or responses to fight the disease issued worldwide organizations and states.
+
 ## Contribute
 The analysis folder and [analyses/ebola_analyses.md](https://github.com/cmrivers/ebola/blob/master/analyses/ebola_analyses.md) file contains community-contributed analyses. If you have something to contribute, send a pull request or email.
 
