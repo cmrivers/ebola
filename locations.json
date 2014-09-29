@@ -1,5 +1,149 @@
 [
   {
+    "address": "Dalaba",
+    "country": "Guinea",
+    "location": {
+      "lat": 10.166667,
+      "lng": -9.383333
+    }
+  },
+  {
+    "address": "Coyah",
+    "country": "Guinea",
+    "location": {
+      "lat": 9.7,
+      "lng": -13.383333
+    }
+  },
+  {
+    "address": "Kerouane",
+    "country": "Guinea",
+    "location": {
+      "lat": 9.266667,
+      "lng": -9.016667
+    }
+  },
+  {
+    "address": "Forecariah",
+    "country": "Guinea",
+    "location": {
+      "lat": 9.433333,
+      "lng": -13.083333
+    }
+  },
+  {
+    "address": "Dubreka",
+    "country": "Guinea",
+    "location": {
+      "lat": 9.783332999999999,
+      "lng": -13.516667
+    }
+  },
+  {
+    "address": "Yomou",
+    "country": "Guinea",
+    "location": {
+      "lat": 7.566000000000001,
+      "lng": -9.2533
+    }
+  },
+  {
+    "address": "Mzerekore",
+    "country": "Guinea",
+    "location": {
+      "lat": 7.75,
+      "lng": -8.816666999999999
+    }
+  },
+  {
+    "address": "Pita",
+    "country": "Guinea",
+    "location": {
+      "lat": 11.059568,
+      "lng": -12.395582
+    }
+  },
+  {
+    "address": "Siguiri",
+    "country": "Guinea",
+    "location": {
+      "lat": 11.416667,
+      "lng": -9.166667
+    }
+  },
+  {
+    "address": "Kourousse",
+    "country": "Guinea",
+    "location": {
+      "lat": 10.65,
+      "lng": -9.883333
+    }
+  },
+  {
+    "address": "Boffa",
+    "country": "Guinea",
+    "location": {
+      "lat": 10.1808254,
+      "lng": -14.0391615
+    }
+  },
+  {
+    "address": "Telimele",
+    "country": "Guinea",
+    "location": {
+      "lat": 10.9,
+      "lng": -13.033333
+    }
+  },
+  {
+    "address": "Cinguiraye",
+    "country": "Guinea",
+    "location": {
+      "lat": 11.3,
+      "lng": -10.716667
+    }
+  },
+  {
+    "address": "Kissidougou",
+    "country": "Guinea",
+    "location": {
+      "lat": 9.183333,
+      "lng": -10.1
+    }
+  },
+  {
+    "address": "Dabola",
+    "country": "Guinea",
+    "location": {
+      "lat": 10.75,
+      "lng": -11.116667
+    }
+  },
+  {
+    "address": "Macenta",
+    "country": "Guinea",
+    "location": {
+      "lat": 8.549999999999999,
+      "lng": -9.466667
+    }
+  },
+  {
+    "address": "Conakry",
+    "country": "Guinea",
+    "location": {
+      "lat": 9.509167,
+      "lng": -13.712222
+    }
+  },
+  {
+    "address": "Conakry",
+    "country": "Guinea",
+    "location": {
+      "lat": 9.509167,
+      "lng": -13.712222
+    }
+  },
+  {
     "country": "Guinea",
     "location": {
       "lat": 9.945587,
