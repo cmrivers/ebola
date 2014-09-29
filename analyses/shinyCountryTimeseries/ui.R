@@ -2,9 +2,9 @@
 library(shiny)
 
 shinyUI(fluidPage(
-    tags$head(includeScript("google-analytics.js")),
-
     titlePanel("Plotting Ebola"),
+
+    tags$head(includeScript("google-analytics.js")),
 
     sidebarLayout(
         sidebarPanel("Interactive plot components",
