@@ -4,19 +4,29 @@ path    = require('path')
 request = require('request-promise')
 base    = "https://maps.googleapis.com/maps/api/geocode/json?address="
 
-fs.readFileAsync(path.join('../', 'locations.json'), 'utf8')
+fs.readFileAsync(path.join('../', 'locations.geojson'), 'utf8')
 .then (locs) ->
-  Promise.resolve(JSON.parse(locs))
+  Promise.resolve(JSON.parse(locs).features)
 .then (locs) ->
   Promise.reduce(locs, ((list, loc, index) ->
-    return if locs[index].location?
+   return if locs[index].geometry?
 
-    request.get(base+encodeURIComponent("#{loc.address || ''}, #{loc.country}"))
+   request.get(base+encodeURIComponent("#{loc.address || ''}, #{loc.country}"))
     .then((v) ->
       v = JSON.parse(v)
-      locs[index].location = v?.results?[0]?.geometry.location
-    )
+      return unless  v?.results?[0]?.geometry.location
+
+      locs[index].geometry =
+        type: "Point",
+        coordinates: [
+          v.results[0].geometry.location.lng,
+          v.results[0].geometry.location.lat
+        ]
+      )
   ), [])
   .then -> locs
 .then (locs) ->
-  console.log JSON.stringify(locs, null, 2)
+  console.log JSON.stringify({
+    type: "FeatureCollection",
+    features: locs
+  }, null, 2)
