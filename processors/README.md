@@ -4,7 +4,7 @@ Processors
 
 ### Geocode
 
-The geocode processor will read in the locations from locations.json and geocode the locations missing a lat and lng pair.
+The geocode processor will read in the locations from locations.geojson and geocode the locations missing a geometry.
 
 You can update the root location file by doing the following.
 
@@ -12,6 +12,5 @@ You can update the root location file by doing the following.
 
     npm i -g coffeescript
 
-    coffee geocode.coffee > tmp.json
-    mv tmp.json ../locations.json
-    rm tmp.json
+    coffee geocode.coffee > tmp.geojson
+    mv tmp.geojson ../locations.geojson
