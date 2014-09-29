@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 
+node_modules
+*.swp
 # C extensions
 *.so
 
@@ -51,4 +53,7 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+
+Icon^M 
+.DS_Store
 
