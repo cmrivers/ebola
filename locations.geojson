@@ -10,8 +10,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -104.798844,
-          39.87166390000001
+          -10.1247811,
+          8.5652126
         ]
       }
     },
@@ -24,8 +24,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -104.798844,
-          39.87166390000001
+          -10.711305,
+          11.2912107
         ]
       }
     },
@@ -38,8 +38,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -104.798844,
-          39.87166390000001
+          -8.816667,
+          7.75
         ]
       }
     },
@@ -124,20 +124,6 @@
         "coordinates": [
           -9.2533,
           7.566000000000001
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "address": "Mzerekore",
-        "country": "Guinea"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.816666999999999,
-          7.75
         ]
       }
     },
