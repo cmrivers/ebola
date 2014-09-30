@@ -4,6 +4,20 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "Dallas, TX",
+        "country": "United States"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.80045109999999,
+          32.7801399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "Gueckedou",
         "country": "Guinea"
       },
@@ -15,7 +29,7 @@
         ]
       }
     },
-   {
+    {
       "type": "Feature",
       "properties": {
         "address": "Dinguiraye",

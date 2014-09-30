@@ -11,7 +11,7 @@ fs.readFileAsync(path.join('../', 'locations.geojson'), 'utf8')
   Promise.reduce(locs, ((list, loc, index) ->
    return if locs[index].geometry?
 
-   request.get(base+encodeURIComponent("#{loc.address || ''}, #{loc.country}"))
+   request.get(base+encodeURIComponent("#{loc.properties.address || ''}, #{loc.properties.country}"))
     .then((v) ->
       v = JSON.parse(v)
       return unless  v?.results?[0]?.geometry.location
