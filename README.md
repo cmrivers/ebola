@@ -7,7 +7,7 @@ Data for the 2014 Ebola outbeak in West Africa
 * `country_timeseries.json` JSON format of `country_timeseries.csv`, NOTE: this file may lag behind the CSV file.
 * `liberia_data/` contains .csv files of data provided by the [Liberia Ministry of Health](http://www.mohsw.gov.lr/content_display.php?sub=report2). I have noticed the data are somewhat inconsistent. Cross-check the data when analyzing.
 * `sl_data/` contains .csv files of data provided by the [Sierra Leone Ministry of Health](http://health.gov.sl/?page_id=583)
-* guinea_data/ contains a mix of .csv and PDF files from the Guinea Ministry of Health. These data are not available online, so I will keep the PDFs in the repo for reference.
+* `guinea_data/` contains a mix of .csv and PDF files from the Guinea Ministry of Health. These data are not available online, so I will keep the PDFs in the repo for reference.
 * `liberia_data.py` converts the liberia_data csv files into a multidimensional pandas dataframe. Pandas is a requirement for this script. Optional argument allows output to .csv.
   * You can run this script with ./liberia_data.py --help to learn more.
 
