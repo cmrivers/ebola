@@ -4,6 +4,48 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "Gueckedou",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.798844,
+          39.87166390000001
+        ]
+      }
+    },
+   {
+      "type": "Feature",
+      "properties": {
+        "address": "Dinguiraye",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.798844,
+          39.87166390000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Nzerekore",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.798844,
+          39.87166390000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "Dalaba",
         "country": "Guinea"
       },
@@ -130,7 +172,7 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "Kourousse",
+        "address": "Kouroussa",
         "country": "Guinea"
       },
       "geometry": {
