@@ -1,6 +1,6 @@
 Data for the 2014 Global Ebola outbeak
 =====
-
+**Note** We are hosting a Computing for Ebola Challenge hackathon from Oct 3-10, 2014. To learn more and sign up to participate, visit [HackerLeague.](https://www.hackerleague.org/hackathons/computing-for-ebola-challenge)
 ## Contents
 
 * `country_timeseries.csv` contains a time series of case counts and deaths is from the [World Health Organization](http://www.who.int/csr/don/en/) and [WHO situation reports](http://www.who.int/csr/disease/ebola/situation-reports/en/).
