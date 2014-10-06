@@ -65,7 +65,7 @@ shinyServer(function(input, output) {
 
   plot <- reactive({
     all <- c("Guinea", "Liberia", "SierraLeone", "Nigeria", "Senegal")
-    c_colors <- brewer.pal(length(all), 'Set 1')
+    c_colors <- brewer.pal(length(all), 'Set1')
     names(c_colors) <- all
     g <- ggplot(data = data_plot(),
                 aes(x = as.numeric(day), y = as.numeric(count),
@@ -74,7 +74,7 @@ shinyServer(function(input, output) {
                             facet_grid(~ type) +
                                 scale_x_continuous(name="Days after first report") +
                                     scale_y_continuous(name="Counts") +
-                                        scale_colour_manual(name="Country", values=c_colors) + 
+                                        scale_colour_manual(name="Country", values=c_colors) +
                                           ggtitle("Number of observations for days after first report")
 
     if(!input$log){
