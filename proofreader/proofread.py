@@ -8,7 +8,10 @@ import sys, csv
 
 if len(sys.argv) < 2:
     print "Usage: proofread filename.csv"
-    exit(0)
+    exit(1)
+
+# Keep this at 0 if it's successful, return 1 if there are errors
+exit_code = 0
 
 # Compute the Levenshtein edit distance between two strings
 # From http://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python
@@ -38,6 +41,7 @@ def whitespace_test(items, descriptor):
     
     for item in items:
         if item != item.strip() or "\n" in item or "  " in item:
+            exit_code = 1
             print "Whitespace found in %s '\033[43m%s\033[0m'" % (descriptor, item)
 
 # Compares passed items vs. passed knowns, calling out anything not matching
@@ -47,6 +51,7 @@ def unknowns_test(items, knowns, descriptor):
     unknowns = [item for item in items if item not in knowns]
     
     for unknown in unknowns:
+        exit_code = 1
         # Sort based on edit distance to suggest alternatives
         possibles = sorted(knowns, key=lambda known: levenshtein(unknown, known))
         print "Unknown %s '\033[43m%s\033[0m', maybe you meant '\033[42m'%s'\033[0m' or '\033[42m'%s'\033[0m'?" % (descriptor, unknown, possibles[0], possibles[1])
@@ -83,3 +88,5 @@ with open(filename, 'rU') as csvfile:
     variables = [row[col_name] for row in reader]    
     whitespace_test(variables, 'variable')
     unknowns_test(variables, var_names, 'variable')
+
+exit(exit_code)
