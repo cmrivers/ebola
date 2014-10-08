@@ -42,7 +42,7 @@ def whitespace_test(items, descriptor):
     for item in items:
         if item != item.strip() or "\n" in item or "  " in item:
             exit_code = 1
-            print "Whitespace found in %s '\033[43m%s\033[0m'" % (descriptor, item)
+            print "Whitespace found in %s '\033[30;43m%s\033[0m'" % (descriptor, item)
 
 # Compares passed items vs. passed knowns, calling out anything not matching
 def unknowns_test(items, knowns, descriptor):
@@ -54,7 +54,7 @@ def unknowns_test(items, knowns, descriptor):
         exit_code = 1
         # Sort based on edit distance to suggest alternatives
         possibles = sorted(knowns, key=lambda known: levenshtein(unknown, known))
-        print "Unknown %s '\033[43m%s\033[0m', maybe you meant '\033[42m'%s'\033[0m' or '\033[42m'%s'\033[0m'?" % (descriptor, unknown, possibles[0], possibles[1])
+        print "Unknown %s '\033[30;43m%s\033[0m', maybe you meant '\033[30;42m%s\033[0m' or '\033[30;42m%s\033[0m'?" % (descriptor, unknown, possibles[0], possibles[1])
 
 # Let's read in the canonical rows and columns
 with open('canonical_columns.csv', 'rU') as cols_file:
