@@ -35,7 +35,7 @@ I cannot guarantee the accuracy of this data. These data are digitized by hand, 
 
 ## Contact
 
-I am **Caitlin Rivers**, a scholar in computational epidemiology at Virginia Tech. You can reach me at:
+I am **Caitlin Rivers**, a grad student in computational epidemiology at the [Network Dynamics and Simulation Science Laboratory](http://www.vbi.vt.edu/ndssl) at Virginia Tech. Also see the NDSSL website for additional Ebola data resources. You can reach me at:
 * cmrivers@vbi.vt.edu
 * [@cmyeaton](https://twitter.com/cmyeaton)
 
