@@ -284,20 +284,6 @@
     {
       "type": "Feature",
       "properties": {
-        "address": "Conakry",
-        "country": "Guinea"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -13.712222,
-          9.509167
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "country": "Guinea"
       },
       "geometry": {
