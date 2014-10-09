@@ -586,6 +586,34 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "River Gee County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.872159999999999,
+          5.2604894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Sinoe County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6600586,
+          5.49871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "RiverCess County",
         "country": "Liberia"
       },
