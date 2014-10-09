@@ -74,6 +74,48 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "Beyla",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.633333,
+          8.683333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kindia",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.85,
+          10.066667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Lola",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.533332999999999,
+          7.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "Coyah",
         "country": "Guinea"
       },
@@ -264,20 +306,6 @@
         "coordinates": [
           -9.466667,
           8.549999999999999
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "address": "Conakry",
-        "country": "Guinea"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -13.712222,
-          9.509167
         ]
       }
     },
@@ -552,6 +580,34 @@
         "coordinates": [
           -8.6600586,
           6.8427612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "River Gee County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.872159999999999,
+          5.2604894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Sinoe County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6600586,
+          5.49871
         ]
       }
     },
