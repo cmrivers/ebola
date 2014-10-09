@@ -74,6 +74,48 @@
     {
       "type": "Feature",
       "properties": {
+        "address": "Beyla",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.633333,
+          8.683333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kindia",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.85,
+          10.066667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Lola",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.533332999999999,
+          7.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "Coyah",
         "country": "Guinea"
       },
