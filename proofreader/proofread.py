@@ -39,10 +39,11 @@ def levenshtein(s1, s2):
 def whitespace_test(items, descriptor):
     print "\n\033[1m## Testing %ss for whitespace\033[0m" % descriptor
     
-    for item in items:
+    for idx, item in enumerate(items):
         if item != item.strip() or "\n" in item or "  " in item:
             exit_code = 1
-            print "Whitespace found in %s '\033[30;43m%s\033[0m'" % (descriptor, item)
+            print "line:%i: Whitespace found in %s '\033[30;43m%s\033[0m'" % \
+                  (idx + 2, descriptor, item)
 
 # Compares passed items vs. passed knowns, calling out anything not matching
 def unknowns_test(items, knowns, descriptor):
@@ -85,7 +86,7 @@ with open(filename, 'rU') as csvfile:
     # We do a set intersection and take the first match.
     col_name = (set(variable_col_names) & set(headers)).pop()
     
-    variables = [row[col_name] for row in reader]    
+    variables = [row[col_name] for row in reader]
     whitespace_test(variables, 'variable')
     unknowns_test(variables, var_names, 'variable')
 
