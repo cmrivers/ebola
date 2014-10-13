@@ -1,16 +1,16 @@
-Date;Variable;National;Lokolia;Watsikengo;HGR Boende;Boende moke;Lokula;Mondombe
-10/05/14;Number of registered cases;71;;;;;;
-10/05/14;Laboratory confirmed cases;30;;;;;;
-10/05/14;Probable cases;26;;;;;;
-10/05/14;Suspected cases;15;;;;;;
-10/05/14;Number of deaths;43;;;;;;
-10/05/14;Number of ill health personnel;9;;;;;;
-10/05/14;Number of deaths, health personnel;8;;;;;;
-10/05/14;Number of hospitalized people (in isolation);2;1;0;1;0;0;0
-10/05/14;Contacts requiring follow-up;305;;;;;;
-10/05/14;Contacts seen to date;305;;;;;;
-10/05/14;Contacts discarded from follow-up after 21 days;816;;;;;;
-10/05/14;Number of lost contacts ;0;;;;;;
-10/05/14;Number of samples analyzed ;153;;;;;;
-10/05/14;Case Fatality Rate (CFR) - Confirmed, probable & suspected cases (%);60.5;;;;;;
-10/05/14;Contacts recorded to date;1121;;;;;;
+"Date";"Variable";"National";"Lokolia";"Watsikengo";"HGR Boende";"Boende moke";"Lokula";"Mondombe"
+"10/05/14";"Number of registered cases";"71";"";"";"";"";"";""
+"10/05/14";"Laboratory confirmed cases";"30";"";"";"";"";"";""
+"10/05/14";"Probable cases";"26";"";"";"";"";"";""
+"10/05/14";"Suspected cases";"15";"";"";"";"";"";""
+"10/05/14";"Number of deaths";"43";"";"";"";"";"";""
+"10/05/14";"Number of ill health personnel";"9";"";"";"";"";"";""
+"10/05/14";"Number of deaths, health personnel";"8";"";"";"";"";"";""
+"10/05/14";"Number of hospitalized people (in isolation)";"2";"1";"0";"1";"0";"0";"0"
+"10/05/14";"Contacts requiring follow-up";"305";"";"";"";"";"";""
+"10/05/14";"Contacts seen to date";"305";"";"";"";"";"";""
+"10/05/14";"Contacts discarded from follow-up after 21 days";"816";"";"";"";"";"";""
+"10/05/14";"Number of lost contacts ";"0";"";"";"";"";"";""
+"10/05/14";"Number of samples analyzed ";"153";"";"";"";"";"";""
+"10/05/14";"Case Fatality Rate (CFR) - Confirmed, probable & suspected cases (%)";"60.5";"";"";"";"";"";""
+"10/05/14";"Contacts recorded to date";"1121";"";"";"";"";"";""
