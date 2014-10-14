@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>REQUIRED: The name of an organization or individual that developed the data set.</origin>
+				<pubdate>REQUIRED: The date when the data set is published or otherwise made available for release.</pubdate>
+				<title Sync="TRUE">SDE_SDE_roads</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink Sync="TRUE"></onlink>
+				<ftname Sync="TRUE">SDE_SDE_roads</ftname>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>REQUIRED: A brief narrative summary of the data set.</abstract>
+			<purpose>REQUIRED: A summary of the intentions with which the data set was developed.</purpose>
+			<langdata Sync="TRUE">en</langdata>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>REQUIRED: The year (and optionally month, or month and day) for which the data set corresponds to the ground.</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>REQUIRED: The basis on which the time period of content information is determined.</current>
+		</timeperd>
+		<status>
+			<progress>REQUIRED: The state of the data set.</progress>
+			<update>REQUIRED: The frequency with which changes and additions are made to the data set after the initial data set is completed.</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-11.468870</westbc>
+				<eastbc Sync="TRUE">-7.444570</eastbc>
+				<northbc Sync="TRUE">8.524250</northbc>
+				<southbc Sync="TRUE">4.355470</southbc>
+			</bounding>
+			<lboundng>
+				<leftbc Sync="TRUE">-11.468870</leftbc>
+				<rightbc Sync="TRUE">-7.444570</rightbc>
+				<topbc Sync="TRUE">8.524250</topbc>
+				<bottombc Sync="TRUE">4.355470</bottombc>
+			</lboundng>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords.</themekt>
+				<themekey>REQUIRED: Common-use word or phrase used to describe the subject of the data set.</themekey>
+			</theme>
+		</keywords>
+		<accconst>REQUIRED: Restrictions and legal prerequisites for accessing the data set.</accconst>
+		<useconst>REQUIRED: Restrictions and legal prerequisites for using the data set after access is granted.</useconst>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</native>
+		<natvform Sync="TRUE">Personal GeoDatabase Feature Class</natvform>
+	</idinfo>
+	<dataqual>
+		<lineage>
+			<procstep>
+				<procdesc Sync="TRUE">Dataset copied.</procdesc>
+				<srcused Sync="TRUE">\\Gis-server\gis_nfs\vector\topography\liberia_contours.mdb</srcused>
+				<date Sync="TRUE">20050523</date>
+				<time Sync="TRUE">15240400</time>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Dataset copied.</procdesc>
+				<srcused Sync="TRUE"></srcused>
+				<date Sync="TRUE">20050523</date>
+				<time Sync="TRUE">16331800</time>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\dkamason\LOCALS~1\Temp\xml37.tmp</srcused><date Sync="TRUE">20050802</date><time Sync="TRUE">10435300</time></procstep><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\Documents and Settings\dkamason\Desktop\metadata.xml</srcused><date Sync="TRUE">20050804</date><time Sync="TRUE">10024300</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">\\LISGISWWKS018\C$\GIS\gis-ext drive Bup\Gislis gugu2\vector\nimac_gis_vector.mdb</srcused><date Sync="TRUE">20100129</date><time Sync="TRUE">13491900</time></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="SDE_SDE_roads">
+				<sdtstype Sync="TRUE">String</sdtstype>
+				<ptvctcnt Sync="TRUE">3544</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="SDE_SDE_roads">
+				<efeatyp Sync="TRUE">Simple</efeatyp>
+				<esritopo Sync="TRUE">FALSE</esritopo>
+				<linrefer Sync="TRUE">FALSE</linrefer>
+				<spindex Sync="TRUE">TRUE</spindex>
+				<efeageom Sync="TRUE">Polyline</efeageom>
+				<efeacnt Sync="TRUE">3544</efeacnt>
+			</esriterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<geograph>
+				<latres Sync="TRUE">0.000010</latres>
+				<longres Sync="TRUE">0.000010</longres>
+				<geogunit Sync="TRUE">Decimal degrees</geogunit>
+			</geograph>
+			<geodetic>
+				<horizdn Sync="TRUE">D_WGS_1984</horizdn>
+				<ellips Sync="TRUE">WGS_1984</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257224</denflat>
+			</geodetic>
+			<cordsysn>
+				<geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+			</cordsysn>
+		</horizsys>
+		<vertdef>
+			<altsys>
+				<altres Sync="TRUE">0.000010</altres>
+				<altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="SDE_SDE_roads">
+			<attr><attrlabl Sync="TRUE">F_CODE</attrlabl><attalias Sync="TRUE">F_CODE</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">OBJECTID</attrlabl>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">OBJECTID</attalias>
+				<attrtype Sync="TRUE">OID</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">4</attwidth>
+			</attr>
+			<attr><attrlabl Sync="TRUE">F_CODE_DES</attrlabl><attalias Sync="TRUE">F_CODE_DES</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attalias Sync="TRUE">Shape</attalias>
+				<attrtype Sync="TRUE">Geometry</attrtype>
+				<attscale Sync="TRUE">0</attscale>
+				<attwidth Sync="TRUE">0</attwidth>
+			</attr>
+			<attr><attrlabl Sync="TRUE">SHAPE</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><enttyp>
+				<enttypl Sync="TRUE">SDE_SDE_roads</enttypl>
+				<enttypc Sync="TRUE">3544</enttypc>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+			</enttyp>
+			<attr><attrlabl Sync="TRUE">NAM</attrlabl><attalias Sync="TRUE">NAM</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">NAM_DESCRI</attrlabl><attalias Sync="TRUE">NAM_DESCRI</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">CATEGORY</attrlabl><attalias Sync="TRUE">CATEGORY</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">16</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">RD_ASSESS</attrlabl><attalias Sync="TRUE">RD_ASSESS</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">20</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">SHAPE_Length</attrlabl><attalias Sync="TRUE">SHAPE_Length</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">8</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Length of feature in internal units.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Positive real numbers that are automatically generated.</udom></attrdomv></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20060601</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+					<cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+					<city>REQUIRED: The city of the address.</city>
+					<state>REQUIRED: The state or province of the address.</state>
+					<postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+				</cntaddr>
+				<cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<langmeta Sync="TRUE">en</langmeta>
+		<metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<dataIdInfo>
+		<envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="en"></languageCode>
+		</dataLang>
+		<geoBox esriExtentType="decdegrees">
+			<westBL Sync="TRUE">-11.46887</westBL>
+			<eastBL Sync="TRUE">-7.44457</eastBL>
+			<northBL Sync="TRUE">8.52425</northBL>
+			<southBL Sync="TRUE">4.35547</southBL>
+			<exTypeCode Sync="TRUE">1</exTypeCode>
+		</geoBox>
+		<idCitation>
+			<resTitle Sync="TRUE">SDE_SDE_roads</resTitle>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005"></PresFormCd>
+			</presForm>
+			<resRefDate><refDate>200411</refDate><refDateType><DateTypCd value="001"></DateTypCd></refDateType></resRefDate><citRespParty><rpIndName>Dana KAMASON</rpIndName><rpOrgName>DPKO, UNMIL</rpOrgName><rpPosName>GIS Assistant</rpPosName><role><RoleCd value="006"></RoleCd></role><rpCntInfo><cntAddress><delPoint>UNMIL GIS Unit</delPoint><city>Monrovia</city><postCode>00232</postCode><eMailAdd>kamason@un.org</eMailAdd><country>lr</country></cntAddress><cntPhone><voiceNum>+2316592496</voiceNum></cntPhone></rpCntInfo></citRespParty><citRespParty><rpIndName>Dong Joo KOH</rpIndName><rpOrgName>DPKO, UNMIL</rpOrgName><rpPosName>Chief GIS</rpPosName><rpCntInfo><cntAddress><delPoint>UNMIL GIS Unit</delPoint><city>Monrovia</city><postCode>00231</postCode><eMailAdd>dongjoo@un.org</eMailAdd><country>lr</country></cntAddress><cntPhone><voiceNum>+2316583956</voiceNum></cntPhone></rpCntInfo><role><RoleCd value="007"></RoleCd></role></citRespParty><resRefDate><refDate>200411</refDate><refDateType><DateTypCd value="002"></DateTypCd></refDateType></resRefDate></idCitation>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd>
+		</spatRpType>
+		<dataExt>
+			<geoEle>
+				<GeoBndBox esriExtentType="native">
+					<westBL Sync="TRUE">-11.46887</westBL>
+					<northBL Sync="TRUE">8.52425</northBL>
+					<southBL Sync="TRUE">4.35547</southBL>
+					<eastBL Sync="TRUE">-7.44457</eastBL>
+					<exTypeCode Sync="TRUE">1</exTypeCode>
+				</GeoBndBox>
+			</geoEle>
+		</dataExt>
+		<idAbs>roads represents roads network within Liberia. </idAbs><descKeys KeyTypCd="005"><keyTyp><KeyTypCd value="005"></KeyTypCd></keyTyp><keyword>Roads</keyword></descKeys><tpCat><TopicCatCd value="018"></TopicCatCd></tpCat><idPoC Sync="TRUE"><rpIndName Sync="TRUE">Dong Joo KOH</rpIndName><rpOrgName Sync="TRUE">DPKO, UNMIL</rpOrgName><rpPosName Sync="TRUE">Chief GIS</rpPosName><rpCntInfo><cntPhone><voiceNum Sync="TRUE">+2316583956</voiceNum></cntPhone><cntAddress><delPoint Sync="TRUE">UNMIL GIS Unit</delPoint><city Sync="TRUE">Monrovia</city><postCode Sync="TRUE">00231</postCode><country Sync="TRUE">lr</country><eMailAdd Sync="TRUE">dongjoo@un.org</eMailAdd></cntAddress></rpCntInfo><role><RoleCd Sync="TRUE" value="007"></RoleCd></role></idPoC></dataIdInfo>
+	<distInfo>
+		<distributor>
+			<distorTran>
+				<onLineSrc>
+					<orDesc Sync="TRUE">002</orDesc>
+					<protocol Sync="TRUE">Local Area Network</protocol>
+					<linkage Sync="TRUE">file://</linkage>
+				</onLineSrc>
+				<offLineMed><medName><MedNameCd value="001"></MedNameCd></medName></offLineMed></distorTran>
+			<distorFormat>
+				<formatName Sync="TRUE">Personal GeoDatabase Feature Class</formatName>
+				<formatVer>ArcGIS 9.0</formatVer></distorFormat>
+			<distorCont><rpIndName>Dong Joo KOH</rpIndName><rpOrgName>DPKO, UNMIL</rpOrgName><rpPosName>Chief GIS</rpPosName><rpCntInfo><cntAddress><delPoint>UNMIL GIS Unit</delPoint><city>Monrovia</city><postCode>00231</postCode><eMailAdd>dongjoo@un.org</eMailAdd><country>lr</country></cntAddress><cntPhone><voiceNum>+2316583956</voiceNum></cntPhone></rpCntInfo><role><RoleCd value="005"></RoleCd></role></distorCont><distorOrdPrc><ordInstr>Please contact Chief GIS, UNMIL. dongjoo@un.org</ordInstr></distorOrdPrc></distributor>
+	</distInfo>
+	<Esri>
+		<CreaDate>20100129</CreaDate>
+		<ModDate>20060601</ModDate>
+		<ModTime>11535300</ModTime>
+		<SyncDate>20060601</SyncDate>
+		<SyncOnce>FALSE</SyncOnce>
+		<SyncTime>11535300</SyncTime>
+		<CreaTime>13491900</CreaTime>
+		<DataProperties><lineage><Process ToolSource="C:\arcgis9\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20050923" Time="150218">CopyFeatures "Database Connections\Connection to lr02web02.sde\SDE.SDE.Transport\SDE.SDE.roads" "C:\UNMIL GIS Data.mdb\Transport\SDE_SDE_roads" # 0 0 0</Process></lineage></DataProperties><MetaID>{BD59AEC5-9DA3-47E1-A527-B60747341D1C}</MetaID></Esri>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="004"></CharSetCd>
+	</mdChar>
+	<mdDateSt Sync="TRUE">20060601</mdDateSt>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005"></ScopeCd>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<mdLang>
+		<languageCode Sync="TRUE" value="en"></languageCode>
+	</mdLang>
+	<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+	<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE">GCS_WGS_1984</identCode>
+			</refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep>
+			<topLvl>
+				<TopoLevCd Sync="TRUE" value="001"></TopoLevCd>
+			</topLvl>
+			<geometObjs Name="SDE_SDE_roads"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">3544</geoObjCnt></geometObjs></VectSpatRep>
+	</spatRepInfo>
+	<mdContact><rpIndName>Dana KAMASON</rpIndName><rpOrgName>DPKO, UNMIL</rpOrgName><rpPosName>GIS Assistant</rpPosName><rpCntInfo><cntAddress><delPoint>UNMIL GIS Unit</delPoint><city>Monrovia</city><postCode>00231</postCode><eMailAdd>kamason@un.org</eMailAdd><country>lr</country></cntAddress><cntPhone><voiceNum>+2316592496</voiceNum></cntPhone></rpCntInfo><role><RoleCd value="006"></RoleCd></role></mdContact><dqInfo><dataLineage><statement>This dataset was derived from NIMA Vmap L1 and a survey by UNMIL Irish team, then anaylised and updated by UNMIL GIS Unit using Landsat imagery. 
+New roads were digitized from the Landsat and non-existing roads were deleted from the source datasets.</statement></dataLineage><dqScope><scpLvl><ScopeCd value="005"></ScopeCd></scpLvl></dqScope></dqInfo></metadata>

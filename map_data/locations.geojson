@@ -1,0 +1,839 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Dallas, TX",
+        "country": "United States"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.80045109999999,
+          32.7801399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Gueckedou",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.1247811,
+          8.5652126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Dinguiraye",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.711305,
+          11.2912107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Nzerekore",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.816667,
+          7.75
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Dalaba",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.383333,
+          10.166667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Beyla",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.633333,
+          8.683333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kindia",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.85,
+          10.066667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Lola",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.533332999999999,
+          7.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Coyah",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.383333,
+          9.7
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kerouane",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.016667,
+          9.266667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Forecariah",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.083333,
+          9.433333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Dubreka",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.516667,
+          9.783332999999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Yomou",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.2533,
+          7.566000000000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Pita",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.395582,
+          11.059568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Siguiri",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.166667,
+          11.416667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kouroussa",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.883333,
+          10.65
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Boffa",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.0391615,
+          10.1808254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Telimele",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.033333,
+          10.9
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Cinguiraye",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.716667,
+          11.3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kissidougou",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.1,
+          9.183333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Dabola",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.116667,
+          10.75
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Macenta",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.466667,
+          8.549999999999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Conakry",
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.712222,
+          9.509167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "Guinea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.696645,
+          9.945587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.429499000000002,
+          6.428055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.779889,
+          8.460555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "Nigeria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.675277,
+          9.081999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "Nigeria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.675277,
+          9.081999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "Senegal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.452362,
+          14.497401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Bomi County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.8451467,
+          6.7562926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Bong County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.367308399999999,
+          6.829501899999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Gbarpolu County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0807298,
+          7.495263700000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Grand Bassa",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8124935,
+          6.2308452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Grand Cape Mount",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.0711758,
+          7.0467758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Grand Gedeh",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2212979,
+          5.9222078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Grand Kru County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.2212979,
+          4.7613862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Lofa County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.7232673,
+          8.191118399999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Margibi County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.3048897,
+          6.5151875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Maryland County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.741670300000001,
+          4.7258878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Margibi County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.3048897,
+          6.5151875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Montserrado County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.5296115,
+          6.5525815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Nimba County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6600586,
+          6.8427612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "River Gee County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.872159999999999,
+          5.2604894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Sinoe County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6600586,
+          5.49871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "RiverCess County",
+        "country": "Liberia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.456155,
+          5.902532799999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kailahun",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.573889,
+          8.277222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kenema",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.1957172,
+          7.863214699999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kono",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.8903099,
+          8.7663285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Kambia",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.9176518,
+          9.126166399999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Koinadugu",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.36363,
+          9.5168769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Bombali",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.1632718,
+          9.2475837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Tonkolili",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.7947561,
+          8.9804274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Port Loko",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.7875,
+          8.766667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Pujehun",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.718056,
+          7.350556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Bo",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.7409946,
+          7.9551791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Koinadugu",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.36363,
+          9.5168769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Moyamba",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.433333,
+          8.160556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Bonthe",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.505,
+          7.526389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Western area urban district",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.2432632,
+          8.4545561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Western area rural district",
+        "country": "Sierra Leone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.035694,
+          8.3114983
+        ]
+      }
+    }
+  ]
+}
