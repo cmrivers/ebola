@@ -4,7 +4,7 @@ path    = require('path')
 request = require('request-promise')
 base    = "https://maps.googleapis.com/maps/api/geocode/json?address="
 
-fs.readFileAsync(path.join('../', 'locations.geojson'), 'utf8')
+fs.readFileAsync(path.join('../', 'map_data/', 'locations.geojson'), 'utf8')
 .then (locs) ->
   Promise.resolve(JSON.parse(locs).features)
 .then (locs) ->
