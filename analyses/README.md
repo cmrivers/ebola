@@ -1,3 +1,5 @@
+This directory includes derivative files from top-level data, as well as analysis scripts and results.
+
 # Instructions
 _________
 
