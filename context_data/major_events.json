@@ -1,0 +1,39 @@
+{
+  "events": [
+    {
+      "date": "08/08/2014",
+      "source": "http://en.wikipedia.org/wiki/Ebola_virus_epidemic_in_West_Africa",
+      "actor": "WHO",
+      "headline": "Outbreak is an international public health emergency",
+      "summary": ""
+    },
+    {
+      "date": "08/24/2014",
+      "source": "http://apps.who.int/iris/bitstream/10665/134771/1/roadmapsitrep_24Sept2014_eng.pdf",
+      "actor": "WHO",
+      "headline": "Ebola Respons Roadmap",
+      "summary": ""
+    },  
+    {
+      "date": "09/18/2014",
+      "source": "http://www.bbc.com/news/world-africa-29262968",
+      "actor": "UN",
+      "headline": "Threat to international peace and security",
+      "summary": ""
+    },  
+    {
+      "date": "09/19/2014",
+      "source": "http://www.nytimes.com/2014/09/20/world/africa/ebola-outbreak.html",
+      "actor": "Sierra Leone",
+      "headline": "Three-day lockdown",
+      "summary": ""
+    },
+    {
+      "date": "09/27/2014",
+      "source": "http://www.bbc.com/news/world-africa-29393737",
+      "actor": "Liberia",
+      "headline": "Chief medical officer has put herself under quarantine",
+      "summary": "Liberia's chief medical officer has put herself under quarantine for 21 days, after one of her assistants died from the deadly Ebola virus."
+    }
+  ]
+}
