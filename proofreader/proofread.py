@@ -48,14 +48,14 @@ def whitespace_test(items, descriptor):
 # Compares passed items vs. passed knowns, calling out anything not matching
 def unknowns_test(items, knowns, descriptor):
     print "\n\033[1m## Testing %ss for known values\033[0m" % descriptor
-    
-    unknowns = [item for item in items if item not in knowns]
-    
-    for unknown in unknowns:
+
+    unknowns_and_indexes = [(idx + 2, item) for idx, item in enumerate(items) if item not in knowns]
+
+    for unknown in unknowns_and_indexes:
         exit_code = 1
         # Sort based on edit distance to suggest alternatives
-        possibles = sorted(knowns, key=lambda known: levenshtein(unknown, known))
-        print "Unknown %s '\033[30;43m%s\033[0m', maybe you meant '\033[30;42m%s\033[0m' or '\033[30;42m%s\033[0m'?" % (descriptor, unknown, possibles[0], possibles[1])
+        possibles = sorted(knowns, key=lambda known: levenshtein(unknown[1], known))
+        print "line:%i: Unknown %s '\033[30;43m%s\033[0m', maybe you meant '\033[30;42m%s\033[0m' or '\033[30;42m%s\033[0m'?" % (unknown[0], descriptor, unknown[1], possibles[0], possibles[1])
 
 # Let's read in the canonical rows and columns
 with open('canonical_columns.csv', 'rU') as cols_file:
@@ -85,7 +85,7 @@ with open(filename, 'rU') as csvfile:
     # Is the row variable called 'Description' or 'name' or what?
     # We do a set intersection and take the first match.
     col_name = (set(variable_col_names) & set(headers)).pop()
-    
+
     variables = [row[col_name] for row in reader]
     whitespace_test(variables, 'variable')
     unknowns_test(variables, var_names, 'variable')
