@@ -4,6 +4,32 @@
     {
       "type": "Feature",
       "properties": {
+        "country": "Spain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.74922,
+          40.46366700000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "United States"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.712891,
+          37.09024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "Lokolia",
         "country": "Democratic Republic of the Congo"
       },
