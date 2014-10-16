@@ -8,7 +8,7 @@ Guinea,Total cases of probables
 Guinea,Total cases of confirmed
 Guinea,Cumulative (confirmed + probable + suspects)
 Guinea,Total suspected non-class cases
-Guinea,New deaths registered  
+Guinea,New deaths registered
 Guinea,Total deaths of suspects
 Guinea,Total deaths of probables
 Guinea,Total deaths of confirmed
@@ -20,7 +20,7 @@ Guinea,New deaths registered among health workers
 Guinea,Total deaths registered among health workers
 Guinea,New admits to CTE so far
 Guinea,Total number of hospitalized cases in CTE
-Guinea,Total number of exits from CTE 
+Guinea,Total number of exits from CTE
 Guinea,Total number of admissions to CTE
 Guinea,New contacts registered so far
 Guinea,Total contacts registered from start date
