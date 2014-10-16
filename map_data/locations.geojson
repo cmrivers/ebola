@@ -4,6 +4,116 @@
     {
       "type": "Feature",
       "properties": {
+        "country": "Spain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.74922,
+          40.46366700000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "country": "United States"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.712891,
+          37.09024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Lokolia",
+        "country": "Democratic Republic of the Congo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.562519,
+          -0.631684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Watsikengo",
+        "country": "Democratic Republic of the Congo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.5632588,
+          -0.8434999999999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "HGR Boende",
+        "country": "Democratic Republic of the Congo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.2,
+          -0.733333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Boende moke",
+        "country": "Democratic Republic of the Congo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.750031,
+          -0.3814139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Lokula",
+        "country": "Democratic Republic of the Congo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.653891,
+          -0.420979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "address": "Mondombe",
+        "country": "Democratic Republic of the Congo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.7539449,
+          -0.7758398999999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "address": "Dallas, TX",
         "country": "United States"
       },
