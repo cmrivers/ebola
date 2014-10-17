@@ -1,4 +1,4 @@
-Date,Variable,National,Bomi County,Bong County,Gbarpolu County,Grand Bassa,Grand Cape Mount,Grand Gedeh,Grand Kru,Lofa County,Margibi County,Maryland County,Montserrado County,Nimba County,River Gee County,River Cess County,Sinoe County
+Date,Variable,National,Bomi County,Bong County,Gbarpolu County,Grand Bassa,Grand Cape Mount,Grand Gedeh,Grand Kru,Lofa County,Margibi County,Maryland County,Montserrado County,Nimba County,River Gee County,RiverCess County,Sinoe County
 10/4/14,New Case/s (Suspected),23,0,9,0,0,2,0,0,0,0,0,12,0,0,0,0
 10/4/14,New Case/s (Probable),14,0,1,0,0,2,0,0,1,0,0,10,0,0,0,0
 10/4/14,New case/s (confirmed),5,0,2,0,0,0,0,0,0,0,0,0,1,0,0,2
@@ -7,7 +7,7 @@ Date,Variable,National,Bomi County,Bong County,Gbarpolu County,Grand Bassa,Grand
 10/4/14,Total confirmed cases,935,33,70,0,47,6,0,6,285,39,0,358,78,3,4,6
 10/4/14,Total Number of Confirmed Cases of Sierra Leonean Nationality,13,0,0,0,0,1,0,0,11,1,0,0,0,0,0,0
 10/4/14,Total Number of Confirmed Cases of Guinean Nationality,4,3,0,0,0,0,0,0,0,0,0,1,0,0,0,0
-10/4/14,"Cumulative (confirmed, probable, suspected) cases",3921,87,369,1,130,22,3,20,793,562,8,1635,246,19,10,16
+10/4/14,Cumulative (confirmed + probable + suspected),3921,87,369,1,130,22,3,20,793,562,8,1635,246,19,10,16
 10/4/14,Newly Reported Cases in HCW,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
 10/4/14,Cumulative cases among HCW,190,6,26,0,3,3,0,0,23,42,0,76,10,1,0,0
 10/4/14,Newly Reported deaths in HCW,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -30,7 +30,7 @@ Date,Variable,National,Bomi County,Bong County,Gbarpolu County,Grand Bassa,Grand
 10/4/14,Total Case/s (Suspected),1190,7,226,1,38,8,3,6,57,185,3,600,34,12,3,7
 10/4/14,Total Case/s (Probable),1798,47,73,0,45,8,0,8,453,338,5,677,134,4,3,3
 10/4/14,Total case/s (confirmed),941,33,70,0,47,6,0,6,289,41,0,358,78,3,4,6
-10/4/14,"Cumulative (confirmed, probable, suspected) cases",3929,87,369,1,130,22,3,20,799,564,8,1635,246,19,10,16
+10/4/14,Cumulative (confirmed + probable + suspected),3929,87,369,1,130,22,3,20,799,564,8,1635,246,19,10,16
 10/4/14,Cumulative cases among HCW,192,6,26,0,3,3,0,0,25,42,0,76,10,1,0,0
 10/4/14,Cumulative deaths among HCW,94,5,7,0,1,0,0,0,20,20,0,33,8,0,0,0
 10/4/14,Total death/s in confirmed cases,1018,30,16,0,21,6,0,5,196,43,0,647,49,0,3,2
