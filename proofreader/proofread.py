@@ -129,10 +129,16 @@ for filename in args.filenames:
 
         # Is the row variable called 'Description' or 'name' or what?
         # We do a set intersection and take the first match.
-        col_name = (set(variable_col_names) & set(headers)).pop()
+        matches = (set(variable_col_names) & set(headers))
+        
+        if matches:
+            col_name = matches.pop()
 
-        variables = [row[col_name] for row in reader]
-        whitespace_test(variables, 'variable')
-        unknowns_test(variables, var_names, 'variable')
+            variables = [row[col_name] for row in reader]
+            whitespace_test(variables, 'variable')
+            unknowns_test(variables, var_names, 'variable')
+        else:
+            print "Could not identify variable column name"
+            exit_code = 1
 
 exit(exit_code)
