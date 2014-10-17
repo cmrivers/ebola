@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Ebola Graphs</title>
+
+  <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../js/dc/dc.css">
+  <link rel="stylesheet" type="text/css" href="../css/site.css">
+</head>
+
+<!--JQuery Scripts-->
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/jquery.csv-0.71.min.js"></script>
+
+<!--Charting Scripts-->
+<script src="../js/d3/d3.js"></script>
+<script src="../js/crossfilter/crossfilter.js"></script>
+<script src="../js/dc/dc.js"></script>
+
+<!--Specific Charts-->
+<script src="../js/d3-scripts/overview.js"></script>
+<script src="../js/d3-scripts/test.js"></script>
+<script type="text/javascript">
+
+		var data;
+		$(document).ready(function() {
+			$.ajax({
+			    url: "country_timeseries-working.csv",
+			    async: true,
+			    success: function (csvd) {
+						data = $.csv.toArrays(csvd);
+			    },
+			    dataType: "text",
+			    complete: function () {
+						createTable(data);
+				//		createTable(fixData(data));
+			    }
+			});
+		})
+
+		function fixData(data) {
+			var newData = [];
+
+			for (var i = 0; i < data.length; i++) {
+				var row = [];
+				for (var j = 0; j < data[i].length; j++) {
+					var d = data[i][j];
+
+					//if d is blank, look back for older data
+					if (d == "") {
+						var newI = i + 1;
+						var newD = "";
+						while (newD == "" && newI < data.length) {
+							newD = data[newI][j];
+							newI += 1;
+						}
+						d = newD;
+					}
+					row.push(d);
+				}
+				newData.push(row);
+			}
+
+			return newData;
+		}
+
+		function createTable(data) {
+			var doc = document;
+
+			var fragment = doc.createDocumentFragment();
+
+			var thead = doc.createElement("thead");
+			var thr = doc.createElement("tr");
+
+			for (j = 0; j < data[0].length; j++) {
+				var th = doc.createElement("th");
+				th.innerHTML = data[0][j];
+				thr.appendChild(th);
+			}
+			thead.appendChild(thr);
+			fragment.appendChild(thead);
+
+			var tbody = doc.createElement("tbody")
+			for (i = 1; i < data.length; i++) {
+			    var tr = doc.createElement("tr");
+
+					for (j = 0; j < data[i].length; j++) {
+				    var td = doc.createElement("td");
+				    td.innerHTML = data[i][j];
+
+						if (data[i][j] == "Cases") {
+							tr.className = "success";
+						}
+						else if (data[i][j] == "Deaths") {
+							tr.className = "danger";
+						}
+
+				    tr.appendChild(td);
+					}
+			    //does not trigger reflow
+			    tbody.appendChild(tr);
+			}
+
+			fragment.appendChild(tbody);
+
+			$("#table").append(fragment);
+		}
+</script>
+
+<body>
+  <div class="well">
+		<div class="row">
+    	<div class="col-md-10">
+				<h2>Ebola Graphs</h2>
+			</div>
+			<div class="col-md-2">
+				<button id="reset" class="btn btn-info pull-right">Reset</button>
+			</div>
+		</div>
+  </div>
+
+	<div id="graphs" class="row">
+
+	<div class="col-md-6">
+		<div id="chart-line-hitsperday"></div>
+	</div>
+
+	<div class="col-md-6">
+		<div id="casesDeathsChart"></div>
+	</div>
+
+	<div class="col-md-12">
+		<table id="table" class="table table-bordered">
+		</table>
+	</div>
+</div>
+
+
+
+</body>
+</html>

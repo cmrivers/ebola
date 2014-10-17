@@ -1,0 +1,28 @@
+# tmp files
+*.log
+*~
+
+# local files
+node_modules
+
+# ide files
+*.iml
+.idea
+
+# vim files
+.*.swp
+
+# mac
+.DS_Store
+
+# ctag
+.tags
+
+# files for gh-pages and grunt-contrib-jasmine
+.grunt
+
+# jasmine spec runner
+spec/index.html
+
+# coverage reports
+coverage
