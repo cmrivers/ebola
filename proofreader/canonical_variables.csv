@@ -91,3 +91,18 @@ Sierra Leone,contacts_ill
 Sierra Leone,contacts_not_seen
 Sierra Leone,new_completed_contacts
 Sierra Leone,percent_seen
+DRC,Number of registered cases
+DRC,Laboratory confirmed cases
+DRC,Probable cases
+DRC,Suspected cases
+DRC,Number of deaths
+DRC,Number of ill health personnel
+DRC,Number of deaths - health personnel
+DRC,Number of hospitalized people (in isolation)
+DRC,Contacts requiring follow-up
+DRC,Contacts seen to date
+DRC,Contacts discarded from follow-up after 21 days
+DRC,Number of lost contacts
+DRC,Number of samples analyzed
+DRC,Case Fatality Rate (CFR) - Confirmed - probable - suspected cases (%)
+DRC,Contacts recorded to date
