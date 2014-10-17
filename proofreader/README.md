@@ -20,6 +20,14 @@ These examples will currently return warnings about unknown elements or extra wh
 ./proofread.py ../liberia_data/LiberiaSep_28_2014.csv 
 ```
 
+Or, if you're feeling exceptionally fancy
+
+```
+./proofread.py --autocorrect-whitespace ../sl_data/*.csv
+```
+
+`--autocorrect-whitespace` will automatically remove 'extra' whitespace from files before proofreading them. It won't warn you what it's doing, though, so caveat emptor! 'Extra' whitespace in a cell consists of: multiple spaces in a row, newlines, leading or trailing spaces.
+
 #### Files
 
 [proofread.py](proofread.py) is the Python script that does the proofreading
