@@ -8,7 +8,7 @@ Guinea,Total cases of probables
 Guinea,Total cases of confirmed
 Guinea,Cumulative (confirmed + probable + suspects)
 Guinea,Total suspected non-class cases
-Guinea,New deaths registered  
+Guinea,New deaths registered
 Guinea,Total deaths of suspects
 Guinea,Total deaths of probables
 Guinea,Total deaths of confirmed
@@ -20,7 +20,7 @@ Guinea,New deaths registered among health workers
 Guinea,Total deaths registered among health workers
 Guinea,New admits to CTE so far
 Guinea,Total number of hospitalized cases in CTE
-Guinea,Total number of exits from CTE 
+Guinea,Total number of exits from CTE
 Guinea,Total number of admissions to CTE
 Guinea,New contacts registered so far
 Guinea,Total contacts registered from start date
@@ -91,3 +91,18 @@ Sierra Leone,contacts_ill
 Sierra Leone,contacts_not_seen
 Sierra Leone,new_completed_contacts
 Sierra Leone,percent_seen
+DRC,Number of registered cases
+DRC,Laboratory confirmed cases
+DRC,Probable cases
+DRC,Suspected cases
+DRC,Number of deaths
+DRC,Number of ill health personnel
+DRC,Number of deaths - health personnel
+DRC,Number of hospitalized people (in isolation)
+DRC,Contacts requiring follow-up
+DRC,Contacts seen to date
+DRC,Contacts discarded from follow-up after 21 days
+DRC,Number of lost contacts
+DRC,Number of samples analyzed
+DRC,Case Fatality Rate (CFR) - Confirmed - probable - suspected cases (%)
+DRC,Contacts recorded to date

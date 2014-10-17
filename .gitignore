@@ -7,6 +7,8 @@ node_modules
 # C extensions
 *.so
 
+*Icon* 
+
 # Distribution / packaging
 .Python
 env/
@@ -56,4 +58,3 @@ docs/_build/
 
 Icon^M 
 .DS_Store
-

@@ -1,6 +1,10 @@
 Data for the 2014 Global Ebola outbeak
 =====
 
+## Announcements
+Datamarket has made these data available through their API [here](https://datamarket.com/data/list/?q=ebola&ref=search). Their website also has interactive visualizations, and allows export to other file formats. As you browse the data on their site, please take note of possible errors, for example when cumulative counts temporarily drop. **Please be aggressive about identifying and correcting these errors through pull requests, so we can improve our data quality.** 
+
+
 ## Contents
 
 * `country_timeseries.csv` contains a time series of case counts and deaths is from the [World Health Organization](http://www.who.int/csr/don/en/) and [WHO situation reports](http://www.who.int/csr/disease/ebola/situation-reports/en/).
@@ -17,7 +21,7 @@ Data for the 2014 Global Ebola outbeak
 
 
 ## Contribute
-The analysis folder and [analyses/ebola_analyses.md](https://github.com/cmrivers/ebola/blob/master/analyses/ebola_analyses.md) file contains community-contributed analyses. If you have something to contribute, send a pull request or email.
+The analysis folder and [analyses/README.md](https://github.com/cmrivers/ebola/blob/master/analyses/README.md) file contains community-contributed analyses. If you have something to contribute, send a pull request or email.
 
 ## How to use
 
