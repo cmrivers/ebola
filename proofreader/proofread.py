@@ -61,8 +61,7 @@ def unknowns_test(items, knowns, descriptor):
         # Sort based on edit distance to suggest alternatives
         possibles = sorted(knowns,
                            key=lambda known: levenshtein(unknown[1], known))
-        print "line:%i: Unknown %s '\033[30;43m%s\033[0m', maybe \
-            you meant '\033[30;42m%s\033[0m' or '\033[30;42m%s\033[0m'?" % \
+        print "line:%i: Unknown %s '\033[30;43m%s\033[0m', maybe you meant '\033[30;42m%s\033[0m' or '\033[30;42m%s\033[0m'?" % \
             (unknown[0], descriptor, unknown[1], possibles[0], possibles[1])
 
 if len(sys.argv) < 2:
@@ -106,7 +105,7 @@ for filename in args.filenames:
 
         with open(filename, 'rU') as csvFile, tempfile:
             reader = csv.reader(csvFile)
-            writer = csv.writer(tempfile)
+            writer = csv.writer(tempfile, lineterminator='\n')
 
             for index, row in enumerate(reader):
                 # Remove newlines, duplicate spaces,
