@@ -25,6 +25,7 @@
 
 		var data;
 		$(document).ready(function() {
+			/*
 			$.ajax({
 			    url: "country_timeseries-working.csv",
 			    async: true,
@@ -37,6 +38,7 @@
 				//		createTable(fixData(data));
 			    }
 			});
+			*/
 		})
 
 		function fixData(data) {
@@ -122,12 +124,33 @@
 
 	<div id="graphs" class="row">
 
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<div id="chart-line-hitsperday"></div>
+	</div>
+
+	<div class="col-md-3">
+		<div id="chart-ring-type"></div>
 	</div>
 
 	<div class="col-md-6">
 		<div id="casesDeathsChart"></div>
+	</div>
+
+	<div class="col-md-3">
+		<div id="barChart"></div>
+	</div>
+
+	<div class="col-md-12">
+		<table id="dc-data-table" class="table table-bordered table-striped">
+			<thead>
+			<tr class="header">
+				<th>Day
+				<th>Country</th>
+				<th>Cases</th>
+				<th>Deaths</th>
+			</tr>
+			</thead>
+		</table>
 	</div>
 
 	<div class="col-md-12">
