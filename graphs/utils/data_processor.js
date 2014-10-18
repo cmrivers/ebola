@@ -9,37 +9,39 @@ var toFile = "test-update.csv";
 var file = "country_timeseries.csv";
 var data = readFileIntoArray(file);
 
-util.puts(data);
+//util.puts(data);
 
 if (data.length > 0) {
-  outputTable(data);
+//  outputTable(data);
 
-    util.puts(" ");
-    util.puts("Countries: ");
+//    util.puts(" ");
+//    util.puts("Countries: ");
   var countries = getCountries(data);
-    util.puts(countries);
-    util.puts(" ");
+//    util.puts(countries);
+//    util.puts(" ");
 
   data = convertCumulativeDataToDailyNumbers(data);
-  outputTable(data);
+//  outputTable(data);
+
+  data = covvertDailyNumbersToCumulative(data);
 
   var newData = [];
   newData.push(["Date", "Day", "Country", "Cases", "Deaths"]);
 
-    util.puts(" ");
-    util.puts("New Data: ");
+//    util.puts(" ");
+//    util.puts("New Data: ");
   for (var i = 1; i < data.length; i++) {
     newData = newData.concat(convertDateRowToCountryRow(data[0], data[i]));
   }
-    outputTable(newData);
-    util.puts(" ");
+//    outputTable(newData);
+//    util.puts(" ");
 
 
-  util.puts(" ");
+//  util.puts(" ");
   //util.puts("String: ");
   var string = convertArrayToCSVString(newData);
   //util.puts(string);
-  util.puts(" ");
+//  util.puts(" ");
 
   util.puts(" ");
   if (writeFile) {
@@ -89,62 +91,61 @@ function convertArrayToCSVString(data) {
 }
 
 function convertCumulativeDataToDailyNumbers(data) {
-
-  //start at the bottom of the array
-  //assume the last row is 'initial' values
-
   var headers = data[0];
 
   var runningTotals = [];
   for (var i = 0; i < countries.length; i++) {
     runningTotals.push([countries[i], 0, 0]);
   }
-  util.puts("Running Totals: " + runningTotals);
 
   for (var i = data.length - 1; i > 0; i--){
-      for (var j = 2; j < headers.length; j++) {
-        for ( var k = 0; k < countries.length; k++) {
-          if(headers[j].indexOf(countries[k]) != -1) {
-            if (headers[j].indexOf("Case") != -1) {
-              var value = data[i][j];
-              var currentTotal = runningTotals[k][1];
+    for (var j = 2; j < headers.length; j++) {
+      for ( var k = 0; k < countries.length; k++) {
+        if(headers[j].indexOf(countries[k]) != -1) {
+          if (headers[j].indexOf("Case") != -1) {
+            var value = data[i][j];
+            var currentTotal = runningTotals[k][1];
 
-              runningTotals[k][1] = Math.max(currentTotal, value);
+            runningTotals[k][1] = Math.max(currentTotal, value);
 
-              var dayIncrease = value - currentTotal;
+            var dayIncrease = value - currentTotal;
 
-              util.puts("Cases: Value - Current Total - Difference" +
-                    value + " - " + currentTotal + " - " + dayIncrease);
-
-              if (dayIncrease < 0) {
-                dayIncrease = 0;
-              }
-              data[i][j] = dayIncrease;
+            if (dayIncrease < 0) {
+              dayIncrease = 0;
             }
-            else if (headers[j].indexOf("Deaths") != -1) {
-              var value = data[i][j];
-              var currentTotal = runningTotals[k][2];
+            data[i][j] = dayIncrease;
+          }
+          else if (headers[j].indexOf("Deaths") != -1) {
+            var value = data[i][j];
+            var currentTotal = runningTotals[k][2];
 
-              runningTotals[k][2] = Math.max(currentTotal, value);
+            runningTotals[k][2] = Math.max(currentTotal, value);
 
-              var dayIncrease = value - currentTotal;
+            var dayIncrease = value - currentTotal;
 
-              util.puts("Deaths: Value - Current Total - Difference" +
-                    value + " - " + currentTotal + " - " + dayIncrease);
-
-              if (dayIncrease < 0) {
-                dayIncrease = 0;
-              }
-              data[i][j] = dayIncrease;
+            if (dayIncrease < 0) {
+              dayIncrease = 0;
             }
-
+            data[i][j] = dayIncrease;
           }
         }
       }
+    }
   }
 
   return data;
+}
 
+function covvertDailyNumbersToCumulative(data) {
+
+  //leave the first and last row
+  for (var i = data.length - 2; i > 0; i--) {
+    for (var j = 2; j < data[i].length; j++) {
+      data[i][j] = data[i][j] + data[i+1][j];
+    }
+  }
+
+  return data;
 }
 
 function convertDateRowToCountryRow(header, row) {
@@ -189,7 +190,6 @@ function getCountries(data) {
       countries.push(data[0][i].split("_")[1]);
     }
   }
-
   return countries;
 }
 

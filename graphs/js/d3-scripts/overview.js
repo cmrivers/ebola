@@ -2,13 +2,14 @@ $(document).ready(function () {
     var chartGroup = "overviewGroup";
 
     $('#reset').click(function () {
-        dc.filterAll(chartGroup);
-        dc.redrawAll(chartGroup);
+        dc.filterAll();
+        dc.redrawAll();
     });
 
     d3.csv("test-update.csv", function (error, data) {
         var casesDeathsChart = dc.lineChart("#casesDeathsChart");
         var typeRingChart = dc.pieChart("#chart-ring-type");
+        //var casesDeathsPieChart = dc.pieChart("#casesDeathsPieChart");
         var casesDeathsCountryChart = dc.barChart("barChart");
 
         var datatable = dc.dataTable("#dc-data-table");
@@ -29,17 +30,18 @@ $(document).ready(function () {
         });
 
         var dayDimension = ndx.dimension(function (d) { return d.Date; });
-        var typeDimension = ndx.dimension(function (d) { return d.Country; });
+        var countryDimension = ndx.dimension(function (d) { return d.Country; });
 
         var casesGroup = dayDimension.group().reduceSum( function (d) {return d.Cases - d.Deaths });
         var deathsGroup = dayDimension.group().reduceSum(dc.pluck('Deaths'));
-        var typeTotalGroup = typeDimension.group().reduceSum(dc.pluck('Cases'));
+
+        var countryGroup = countryDimension.group().reduceSum(dc.pluck('Cases'));
         var group = dayDimension.group();
 
         var minDay = dayDimension.bottom(1)[0].Date;
         var maxDay = dayDimension.top(1)[0].Date;
 
-        var width = 500,
+        var width = 800,
             height = 200;
 
         casesDeathsChart
@@ -50,15 +52,17 @@ $(document).ready(function () {
             .colors(d3.scale.ordinal().range(['#990000', '#555555']))
             .renderArea(true)
             .x(d3.time.scale().domain([minDay,maxDay]))
+            .elasticY(true)
+            .renderHorizontalGridLines(true)
+            .dotRadius(100)
+            .brushOn(true)
             .yAxisLabel("Total");
 
         typeRingChart
-            .width(150).height(150)
-            .dimension(typeDimension)
-            .group(typeTotalGroup)
+            .width(300).height(height)
+            .dimension(countryDimension)
+            .group(countryGroup)
             .innerRadius(30);
-
-
 
         var country = ndx.dimension(function (d) {
           return d.Country;
@@ -70,16 +74,14 @@ $(document).ready(function () {
           .dimension(country)
           .group(countryGroup)
           .colors(d3.scale.ordinal().range(['#a4dee6', '#95d9e2', '#85d3dd', '#76ced9', '#67c9d5', '#57c3d0', '#48becc']))
-          .x(d3.scale.ordinal().domain(countryNameRange))
-          .xUnits(dc.units.ordinal)
+          .x(d3.time.scale().domain([minDay,maxDay]))
           .gap(25)
-          .centerBar(true)
-          .xAxisPadding(width / countryNameRange.length);
+          .centerBar(true);
 
 
         datatable
             .dimension(dayDimension)
-            .group(function(d) {return d.Date;})
+            .group(function(d) {return d.Day;})
             // dynamic columns creation using an array of closures
             .columns([
                 function(d) {return d.Day;},
