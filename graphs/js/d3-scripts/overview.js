@@ -44,7 +44,7 @@ $(document).ready(function () {
         var typeDimension = ndx.dimension(function (d) { return d.Type; });
 
 
-        var typeGroup = dayDimension.group().reduceSum( function (d) {return d.Type });
+        var typeGroup = typeDimension.group().reduceSum( function (d) {return d.Value });
 
         var casesGroup = dayDimension.group().reduceSum( function (d) {
             if (d.Type == "Cases") {
@@ -64,7 +64,12 @@ $(document).ready(function () {
         });
 
         var countryGroup = countryDimension.group().reduceSum( function (d) {
-          return d.Value;
+          if (d.Type = "Cases") {
+            return d.Value;
+          }
+          else {
+            return 0;
+          }
         });
 
         var group = dayDimension.group();
