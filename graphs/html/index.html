@@ -116,46 +116,61 @@
 				<h2>Ebola Graphs</h2>
 			</div>
 			<div class="col-md-2">
-				<button id="reset" class="btn btn-info pull-right">Reset</button>
+				<button id="reset" class="btn btn-warning pull-right">Reset All Graphs</button>
 			</div>
 		</div>
   </div>
 
 	<div id="graphs" class="row">
-	<div class="col-md-3">
-		<div id="countryRingChart"></div>
-	</div>
 
-	<div class="col-md-9">
-		<div id="casesDeathsChart"></div>
-	</div>
+		<div class="col-md-3 chart pie-chart">
+			<div id="countryRingChart"></div>
+		</div>
 
-	<div class="col-md-3">
-		<div id="casesDeathsPieChart"></div>
-	</div>
+		<div class="col-md-3 chart pie-chart">
+			<div id="casesDeathsPieChart"></div>
+		</div>
 
-	<div class="col-md-3">
-		<div id="barChart"></div>
-	</div>
+		<div class="col-md-6 chart stats">
+			<h2> Stats </h2>
+			<div class="row">
+				<div class="col-md-4">
+					<p>Total Cases</p>
+				</div>
+				<div class="col-md-8">
+					<p id="totalCases"></p>
+				</div>
+			</div>
 
-	<div class="col-md-12">
-		<table id="dc-data-table" class="table table-bordered table-striped">
-			<thead>
-			<tr class="header">
-				<th>Day
-				<th>Country</th>
-				<th>Type</th>
-				<th>Value</th>
-			</tr>
-			</thead>
-		</table>
-	</div>
+		</div>
 
-	<div class="col-md-12">
-		<table id="table" class="table table-bordered">
-		</table>
+		<div class="col-md-12 chart line-chart">
+			<div id="casesDeathsChart"></div>
+		</div>
+
+		<div class="col-md-3">
+			<div id="barChart"></div>
+		</div>
+
+		<div class="col-md-12">
+			<table id="dc-data-table" class="table table-bordered table-striped">
+				<thead>
+				<tr class="header">
+					<th>Day
+					<th>Country</th>
+					<th>Type</th>
+					<th>Value</th>
+				</tr>
+				</thead>
+			</table>
+		</div>
+
+		<div class="col-md-12">
+			<table id="table" class="table table-bordered">
+			</table>
+		</div>
+
 	</div>
-</div>
 
 
 

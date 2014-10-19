@@ -14,36 +14,26 @@ $(document).ready(function () {
 
         var datatable = dc.dataTable("#dc-data-table");
 
-        // crossfilter(data) provides a way to put the rows of information into crossfilter,
-        // dimension is how the data should be sliced (ie day of week, locations, datetime)
         var ndx = crossfilter(data);
 
         var countryNameRange = [];
         var parseDate = d3.time.format("%m/%_d/%Y").parse;
+
         var totalCases = 0;
         var totalDeaths = 0;
-
         data.forEach(function(d) {
         	d.Date = parseDate(d.Date);
 
           if ($.inArray(d.Country, countryNameRange) == -1) {
               countryNameRange.push(d.Country);
           }
-
-          switch (d.Type) {
-              case "Cases" :
-                totalCases += d.Value;
-              case "Deaths" :
-                totalDeaths += d.Value;
-          }
-
         });
 
         var dayDimension = ndx.dimension(function (d) { return d.Date; });
         var countryDimension = ndx.dimension(function (d) { return d.Country; });
         var typeDimension = ndx.dimension(function (d) { return d.Type; });
 
-
+        var group = dayDimension.group();
         var typeGroup = typeDimension.group().reduceSum( function (d) {return d.Value });
 
         var casesGroup = dayDimension.group().reduceSum( function (d) {
@@ -64,15 +54,13 @@ $(document).ready(function () {
         });
 
         var countryGroup = countryDimension.group().reduceSum( function (d) {
-          if (d.Type = "Cases") {
+          //if (d.Type == "Cases") {
             return d.Value;
-          }
-          else {
-            return 0;
-          }
+          //}
+          //else {
+          //  return 0;
+          //}
         });
-
-        var group = dayDimension.group();
 
         var minDay = dayDimension.bottom(1)[0].Date;
         var maxDay = dayDimension.top(1)[0].Date;
@@ -90,26 +78,25 @@ $(document).ready(function () {
             .compose([
                 dc.lineChart(casesDeathsChart)
                     .dimension(dayDimension)
-                    .colors('#555555')
-                    .group(casesGroup, "Cases Per Day")
-                    .renderArea(false),
-                dc.lineChart(casesDeathsChart)
-                    .dimension(dayDimension)
                     .colors('#990000')
                     .renderArea(false)
-                    .group(deathsGroup, "Deaths Per Day")
-                ])
-            .brushOn(false)
-            .render();
+                    .group(deathsGroup, "Deaths Per Day"),
+                dc.lineChart(casesDeathsChart)
+                    .dimension(dayDimension)
+                    .colors('#555555')
+                    .group(casesGroup, "Cases Per Day")
+                    .renderArea(false)
+            ])
+            .brushOn(false);
 
         countryRingChart
-            .width(300).height(height)
+            .width(200).height(height)
             .dimension(countryDimension)
             .group(countryGroup)
             .innerRadius(30);
 
         casesDeathsPieChart
-            .width(300).height(height)
+            .width(200).height(height)
             .dimension(typeDimension)
             .group(typeGroup);
 

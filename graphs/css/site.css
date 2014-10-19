@@ -3,6 +3,15 @@ body {
   font: 10px sans-serif;
 }
 
+#graphs {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#reset {
+  margin-top: 15px;
+}
+
 .axis path,
 .axis line {
   fill: none;
@@ -51,4 +60,25 @@ cursor: pointer;
 
 .dc-chart text.pie-slice{
     stroke-width: 0px !important;
+}
+
+.chart {
+  background-color: whitesmoke;
+  border: solid grey 1px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.pie-chart {
+  width: 220px;
+  height: 220px;
+}
+
+.line-chart {
+  width: 940px;
+}
+
+.stats {
+  width: 460px;
 }
