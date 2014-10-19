@@ -6,10 +6,10 @@ $(document).ready(function () {
         dc.redrawAll();
     });
 
-    d3.csv("test-update.csv", function (error, data) {
-        var casesDeathsChart = dc.lineChart("#casesDeathsChart");
-        var typeRingChart = dc.pieChart("#chart-ring-type");
-        //var casesDeathsPieChart = dc.pieChart("#casesDeathsPieChart");
+    d3.csv("test-update2.csv", function (error, data) {
+        var casesDeathsChart = dc.compositeChart("#casesDeathsChart");
+        var countryRingChart = dc.pieChart("#countryRingChart");
+        var casesDeathsPieChart = dc.pieChart("#casesDeathsPieChart");
         var casesDeathsCountryChart = dc.barChart("barChart");
 
         var datatable = dc.dataTable("#dc-data-table");
@@ -20,6 +20,8 @@ $(document).ready(function () {
 
         var countryNameRange = [];
         var parseDate = d3.time.format("%m/%_d/%Y").parse;
+        var totalCases = 0;
+        var totalDeaths = 0;
 
         data.forEach(function(d) {
         	d.Date = parseDate(d.Date);
@@ -27,15 +29,44 @@ $(document).ready(function () {
           if ($.inArray(d.Country, countryNameRange) == -1) {
               countryNameRange.push(d.Country);
           }
+
+          switch (d.Type) {
+              case "Cases" :
+                totalCases += d.Value;
+              case "Deaths" :
+                totalDeaths += d.Value;
+          }
+
         });
 
         var dayDimension = ndx.dimension(function (d) { return d.Date; });
         var countryDimension = ndx.dimension(function (d) { return d.Country; });
+        var typeDimension = ndx.dimension(function (d) { return d.Type; });
 
-        var casesGroup = dayDimension.group().reduceSum( function (d) {return d.Cases - d.Deaths });
-        var deathsGroup = dayDimension.group().reduceSum(dc.pluck('Deaths'));
 
-        var countryGroup = countryDimension.group().reduceSum(dc.pluck('Cases'));
+        var typeGroup = dayDimension.group().reduceSum( function (d) {return d.Type });
+
+        var casesGroup = dayDimension.group().reduceSum( function (d) {
+            if (d.Type == "Cases") {
+              return d.Value;
+            }
+            else {
+              return 0;
+            }
+          });
+        var deathsGroup = dayDimension.group().reduceSum( function(d) {
+          if (d.Type == "Deaths") {
+            return d.Value;
+          }
+          else {
+            return 0;
+          }
+        });
+
+        var countryGroup = countryDimension.group().reduceSum( function (d) {
+          return d.Value;
+        });
+
         var group = dayDimension.group();
 
         var minDay = dayDimension.bottom(1)[0].Date;
@@ -44,25 +75,38 @@ $(document).ready(function () {
         var width = 800,
             height = 200;
 
+
         casesDeathsChart
             .width(width).height(height)
-            .dimension(dayDimension)
-            .group(deathsGroup)
-            .stack(casesGroup)
-            .colors(d3.scale.ordinal().range(['#990000', '#555555']))
-            .renderArea(true)
             .x(d3.time.scale().domain([minDay,maxDay]))
-            .elasticY(true)
+            .yAxisLabel("Total")
+            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
-            .dotRadius(100)
-            .brushOn(true)
-            .yAxisLabel("Total");
+            .compose([
+                dc.lineChart(casesDeathsChart)
+                    .dimension(dayDimension)
+                    .colors('#555555')
+                    .group(casesGroup, "Cases Per Day")
+                    .renderArea(false),
+                dc.lineChart(casesDeathsChart)
+                    .dimension(dayDimension)
+                    .colors('#990000')
+                    .renderArea(false)
+                    .group(deathsGroup, "Deaths Per Day")
+                ])
+            .brushOn(false)
+            .render();
 
-        typeRingChart
+        countryRingChart
             .width(300).height(height)
             .dimension(countryDimension)
             .group(countryGroup)
             .innerRadius(30);
+
+        casesDeathsPieChart
+            .width(300).height(height)
+            .dimension(typeDimension)
+            .group(typeGroup);
 
         var country = ndx.dimension(function (d) {
           return d.Country;
@@ -86,8 +130,8 @@ $(document).ready(function () {
             .columns([
                 function(d) {return d.Day;},
                 function(d) {return d.Country;},
-                function(d) {return d.Cases;},
-                function(d) {return d.Deaths;}
+                function(d) {return d.Type;},
+                function(d) {return d.Value;}
             ]);
 
         dc.renderAll();

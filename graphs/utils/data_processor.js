@@ -4,7 +4,7 @@ var util = require("util");
 var fs = require("fs");
 
 var writeFile = true;
-var toFile = "test-update.csv";
+var toFile = "test-update2.csv";
 
 var file = "country_timeseries.csv";
 var data = readFileIntoArray(file);
@@ -23,10 +23,10 @@ if (data.length > 0) {
   data = convertCumulativeDataToDailyNumbers(data);
 //  outputTable(data);
 
-  data = covvertDailyNumbersToCumulative(data);
+//  data = covvertDailyNumbersToCumulative(data);
 
   var newData = [];
-  newData.push(["Date", "Day", "Country", "Cases", "Deaths"]);
+  newData.push(["Date", "Day", "Country", "Type", "Value"]);
 
 //    util.puts(" ");
 //    util.puts("New Data: ");
@@ -155,28 +155,32 @@ function convertDateRowToCountryRow(header, row) {
   var day = row[1];
 
   for (var i = 0; i < countries.length; i++) {
-    var newRow = [];
-    newRow.push(date);
-    newRow.push(day);
-    newRow.push(countries[i]);
-
-    var cases = 0, deaths = 0;
     for (var j = 2; j < header.length; j++) {
-      var value = header[j];
-      if (value.indexOf(countries[i]) != -1) {
-        if (value.indexOf("Case") != -1) {
-            cases = row[j].toString();
+      var headerValue = header[j];
+      if (headerValue.indexOf(countries[i]) != -1) {
+        var newRow = [];
+
+        if (headerValue.indexOf("Case") != -1) {
+          newRow.push(date);
+          newRow.push(day);
+          newRow.push(countries[i]);
+          newRow.push("Cases");
+          newRow.push(row[j]);
+
+          rows.push(newRow);
         }
-        else if (value.indexOf("Death") != -1) {
-            deaths = row[j].toString();
+        else if (headerValue.indexOf("Death") != -1) {
+
+          newRow.push(date);
+          newRow.push(day);
+          newRow.push(countries[i]);
+          newRow.push("Deaths");
+          newRow.push(row[j]);
+
+          rows.push(newRow);
         }
       }
     }
-
-    newRow.push(cases);
-    newRow.push(deaths);
-
-    rows.push(newRow);
   }
 
   return rows;
