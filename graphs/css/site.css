@@ -67,16 +67,26 @@ cursor: pointer;
   border: solid grey 1px;
   margin: 10px;
   text-align: center;
-  padding: 10px;
+  padding: 0px;
 }
 
 .pie-chart {
   width: 220px;
   height: 220px;
+  padding: 10px !important;
 }
 
 .line-chart {
   width: 940px;
+}
+
+.map-chart {
+  width: 940px;
+}
+
+#map path {
+  stroke: #fff !important;
+  stroke-width: .5px;
 }
 
 .stats {

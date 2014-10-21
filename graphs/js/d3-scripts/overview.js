@@ -10,17 +10,18 @@ $(document).ready(function () {
         var casesDeathsChart = dc.compositeChart("#casesDeathsChart");
         var countryRingChart = dc.pieChart("#countryRingChart");
         var casesDeathsPieChart = dc.pieChart("#casesDeathsPieChart");
-        var casesDeathsCountryChart = dc.barChart("barChart");
+        var casesDeathsCountryChart = dc.barChart("#barChart");
+
+        var map = dc.geoChoroplethChart("#map");
 
         var datatable = dc.dataTable("#dc-data-table");
 
         var ndx = crossfilter(data);
+        var all = ndx.groupAll();
 
         var countryNameRange = [];
         var parseDate = d3.time.format("%m/%_d/%Y").parse;
 
-        var totalCases = 0;
-        var totalDeaths = 0;
         data.forEach(function(d) {
         	d.Date = parseDate(d.Date);
 
@@ -35,7 +36,6 @@ $(document).ready(function () {
 
         var group = dayDimension.group();
         var typeGroup = typeDimension.group().reduceSum( function (d) {return d.Value });
-
         var casesGroup = dayDimension.group().reduceSum( function (d) {
             if (d.Type == "Cases") {
               return d.Value;
@@ -52,22 +52,35 @@ $(document).ready(function () {
             return 0;
           }
         });
-
         var countryGroup = countryDimension.group().reduceSum( function (d) {
-          //if (d.Type == "Cases") {
             return d.Value;
-          //}
-          //else {
-          //  return 0;
-          //}
         });
 
         var minDay = dayDimension.bottom(1)[0].Date;
         var maxDay = dayDimension.top(1)[0].Date;
 
-        var width = 800,
-            height = 200;
+        var width = 798,
+            height = 198;
 
+        // d3.json("us-states.geojson", function (countriesJSON) {
+         d3.json("locations.geojson", function (countriesJSON) {
+
+          map
+            .width(938).height(500)
+            .dimension(countryDimension)
+            .group(countryGroup)
+            .projection(d3.geo.mercator()
+              .scale((width -10 ) / Math.PI)
+              .center([-25, 16]))
+            .colors(d3.scale.quantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
+            .colorDomain([0, 200])
+            .colorCalculator(function (d) { return d ? map.colors()(d) : '#ccc'; })
+            .overlayGeoJson(countriesJSON.features, "country", function (d) {
+                return d.properties.NAME;
+            });
+//            .title(function (d) {
+//                return "Country: " + d.key + "\nCount: " + d.value;
+//            });
 
         casesDeathsChart
             .width(width).height(height)
@@ -93,21 +106,37 @@ $(document).ready(function () {
             .width(200).height(height)
             .dimension(countryDimension)
             .group(countryGroup)
-            .innerRadius(30);
+            .label(function (d) {
+              if (countryRingChart.hasFilter() && !countryRingChart.hasFilter(d.key)) {
+                  return d.key + " (0)";
+              }
+              else {
+                var label = d.key;
+                label += " (\n" + d.value + ")";
+                return label;
+              }
+            });
 
         casesDeathsPieChart
             .width(200).height(height)
             .dimension(typeDimension)
-            .group(typeGroup);
-
-        var country = ndx.dimension(function (d) {
-          return d.Country;
-        });
-        var countryGroup = country.group();
+            .group(typeGroup)
+            .label(function (d) {
+              if (casesDeathsPieChart.hasFilter() && !casesDeathsPieChart.hasFilter(d.key)) {
+                  return d.key + " (0)";
+              }
+              else {
+                var label = d.key;
+                label += " (" + d.value + ")";
+                return label;
+              }
+            })
+            .innerRadius(40);
+//            .colors(['#3182bd', '#6baed6']);
 
         casesDeathsCountryChart
           .width(width).height(height)
-          .dimension(country)
+          .dimension(countryDimension)
           .group(countryGroup)
           .colors(d3.scale.ordinal().range(['#a4dee6', '#95d9e2', '#85d3dd', '#76ced9', '#67c9d5', '#57c3d0', '#48becc']))
           .x(d3.time.scale().domain([minDay,maxDay]))
@@ -127,5 +156,7 @@ $(document).ready(function () {
             ]);
 
         dc.renderAll();
+
+      });
     });
 });
