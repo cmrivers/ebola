@@ -23,23 +23,6 @@
 <script type="text/javascript">
 
 		var data;
-		$(document).ready(function() {
-			/*
-			$.ajax({
-			    url: "country_timeseries-working.csv",
-			    async: true,
-			    success: function (csvd) {
-						data = $.csv.toArrays(csvd);
-			    },
-			    dataType: "text",
-			    complete: function () {
-						createTable(data);
-				//		createTable(fixData(data));
-			    }
-			});
-			*/
-		})
-
 		function fixData(data) {
 			var newData = [];
 
@@ -113,7 +96,7 @@
   <div class="well">
 		<div class="row">
     	<div class="col-md-10">
-				<h2>Ebola Graphs</h2>
+				<h4>Ebola Graphs</h4>
 			</div>
 			<div class="col-md-2">
 				<button id="reset" class="btn btn-warning pull-right">Reset All Graphs</button>
@@ -124,19 +107,19 @@
 	<div id="graphs" class="row">
 
 		<div class="col-md-3 chart pie-chart">
-			<div id="countryRingChart"></div>
-		</div>
-
-		<div class="col-md-3 chart pie-chart">
 			<div id="casesDeathsPieChart"></div>
 		</div>
 
-		<div class="col-md-6 chart line-chart">
+		<div class="col-md-9 chart line-chart">
 			<div id="casesDeathsChart"></div>
 		</div>
 
-		<div class="col-md-12 chart map-chart">
-			<div id="compositeChart"></div>
+		<div class="col-md-6 chart">
+			<div id="barCases"></div>
+		</div>
+
+		<div class="col-md-6 chart">
+			<div id="barDeaths"></div>
 		</div>
 
 		<div class="col-md-12 chart map-chart">

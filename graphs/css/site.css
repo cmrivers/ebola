@@ -9,7 +9,7 @@ body {
 }
 
 #reset {
-  margin-top: 15px;
+  margin-top: 3px;
 }
 
 .axis path,
@@ -81,12 +81,16 @@ cursor: pointer;
 }
 
 .line-chart {
-  width: 460px;
+  width: 700px;
   padding: 10px !important;
   margin-right: 0px;
 }
 
 .map-chart {
+  width: 940px;
+}
+
+.bar-chart {
   width: 940px;
 }
 
