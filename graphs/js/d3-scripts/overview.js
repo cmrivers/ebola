@@ -7,6 +7,8 @@ $(document).ready(function () {
     });
 
     d3.csv("test-update2.csv", function (error, data) {
+        var compositeChart = dc.compositeChart("#compositeChart");
+
         var casesDeathsChart = dc.compositeChart("#casesDeathsChart");
         var countryRingChart = dc.pieChart("#countryRingChart");
         var casesDeathsPieChart = dc.pieChart("#casesDeathsPieChart");
@@ -52,8 +54,25 @@ $(document).ready(function () {
             return 0;
           }
         });
+
         var countryGroup = countryDimension.group().reduceSum( function (d) {
             return d.Value;
+        });
+        var casesCountryGroup = countryDimension.group().reduceSum( function (d) {
+            if (d.Type == "Cases") {
+              return d.Value;
+            }
+            else {
+              return 0;
+            }
+          });
+        var deathsCountryGroup = countryDimension.group().reduceSum( function(d) {
+          if (d.Type == "Deaths") {
+            return d.Value;
+          }
+          else {
+            return 0;
+          }
         });
 
         var minDay = dayDimension.bottom(1)[0].Date;
@@ -63,6 +82,39 @@ $(document).ready(function () {
 
         // d3.json("us-states.geojson", function (countriesJSON) {
          d3.json("locations.geojson", function (countriesJSON) {
+
+            var countryCasesChart = dc.barChart(compositeChart)
+                .gap(100)
+                .group(casesCountryGroup)
+                .colors(['#555555'])
+                .valueAccessor(function (d) {
+                    return d.value;
+                });
+
+            var countryDeathsChart = dc.barChart(compositeChart)
+                .gap(100)
+                .group(deathsCountryGroup)
+                .colors(['#990000'])
+                .valueAccessor(function (d) {
+                    return d.value;
+                });
+
+            compositeChart
+                .width(938).height(300)
+                .dimension(countryDimension)
+                .group(group)
+                .elasticY(true)
+                .x(d3.scale.ordinal().domain(countryNameRange))
+                .xUnits(dc.units.ordinal)
+                .renderHorizontalGridLines(true)
+                .compose([countryCasesChart, countryDeathsChart])
+                .brushOn(true);
+
+            compositeChart
+                .renderlet(function (chart) {
+                    chart.selectAll("g._1").attr("transform", "translate(" + 24 + ", 0)");
+                    chart.selectAll("g._0").attr("transform", "translate(" + -18 + ", 0)");
+                });
 
           map
             .width(938).height(500)
@@ -85,6 +137,7 @@ $(document).ready(function () {
             .width(458).height(197)
             .x(d3.time.scale().domain([minDay,maxDay]))
             .yAxisLabel("Total")
+            .elasticY(true)
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
             .compose([
@@ -111,7 +164,6 @@ $(document).ready(function () {
               }
               else {
                 var label = d.key;
-                label += " (\n" + d.value + ")";
                 return label;
               }
             });
@@ -129,8 +181,8 @@ $(document).ready(function () {
                 label += " (" + d.value + ")";
                 return label;
               }
-            })
-            .innerRadius(40);
+            });
+//            .innerRadius(40);
 //            .colors(['#3182bd', '#6baed6']);
 
         casesDeathsCountryChart

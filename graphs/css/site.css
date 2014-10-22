@@ -30,12 +30,12 @@ cursor: pointer;
 }
 
 .dc-chart rect.bar {
-    stroke: #76ced9;
+    stroke: #ccc;
     cursor: pointer;
 }
 
 .dc-chart g.row rect {
-    stroke: #76ced9;
+    stroke: #ccc;
     fill-opacity: 0.8;
     cursor: pointer;
 }
