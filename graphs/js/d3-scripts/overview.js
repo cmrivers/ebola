@@ -59,8 +59,7 @@ $(document).ready(function () {
         var minDay = dayDimension.bottom(1)[0].Date;
         var maxDay = dayDimension.top(1)[0].Date;
 
-        var width = 798,
-            height = 198;
+        var height = 198;
 
         // d3.json("us-states.geojson", function (countriesJSON) {
          d3.json("locations.geojson", function (countriesJSON) {
@@ -70,20 +69,20 @@ $(document).ready(function () {
             .dimension(countryDimension)
             .group(countryGroup)
             .projection(d3.geo.mercator()
-              .scale((width -10 ) / Math.PI)
+              .scale((800) / Math.PI)
               .center([-25, 16]))
-            .colors(d3.scale.quantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
+            .colors(d3.scale.quantize().range(["#CCCCCC", "#BBBBBB", "#AAAAAA", "#999999", "#888888", "#777777", "#666666", "#555555", "#444444", "#333333"]))
             .colorDomain([0, 200])
-            .colorCalculator(function (d) { return d ? map.colors()(d) : '#ccc'; })
+            .colorCalculator(function (d) { return d ? map.colors()(d) : '#fff'; })
             .overlayGeoJson(countriesJSON.features, "country", function (d) {
                 return d.properties.NAME;
-            });
-//            .title(function (d) {
-//                return "Country: " + d.key + "\nCount: " + d.value;
-//            });
+            })
+           .title(function (d) {
+               return "Country: " + d.key + "\nCount: " + d.value;
+           });
 
         casesDeathsChart
-            .width(width).height(height)
+            .width(458).height(197)
             .x(d3.time.scale().domain([minDay,maxDay]))
             .yAxisLabel("Total")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
@@ -135,7 +134,7 @@ $(document).ready(function () {
 //            .colors(['#3182bd', '#6baed6']);
 
         casesDeathsCountryChart
-          .width(width).height(height)
+          .width(300).height(height)
           .dimension(countryDimension)
           .group(countryGroup)
           .colors(d3.scale.ordinal().range(['#a4dee6', '#95d9e2', '#85d3dd', '#76ced9', '#67c9d5', '#57c3d0', '#48becc']))

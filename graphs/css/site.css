@@ -58,6 +58,10 @@ cursor: pointer;
     stroke: #555;
 }
 
+.dc-chart .empty-chart .pie-slice path {
+  fill: #ddd;
+}
+
 .dc-chart text.pie-slice{
     stroke-width: 0px !important;
 }
@@ -77,7 +81,9 @@ cursor: pointer;
 }
 
 .line-chart {
-  width: 940px;
+  width: 460px;
+  padding: 10px !important;
+  margin-right: 0px;
 }
 
 .map-chart {
@@ -85,8 +91,12 @@ cursor: pointer;
 }
 
 #map path {
-  stroke: #fff !important;
+  stroke: #ccc !important;
   stroke-width: .5px;
+}
+
+#map .deselected path{
+  fill: #eee;
 }
 
 .stats {
