@@ -21,7 +21,7 @@ Datamarket has made these data available through their API [here](https://datama
 
 
 ## Contribute
-The analysis folder and [analyses/ebola_analyses.md](https://github.com/cmrivers/ebola/blob/master/analyses/ebola_analyses.md) file contains community-contributed analyses. If you have something to contribute, send a pull request or email.
+The analysis folder and [analyses/README.md](https://github.com/cmrivers/ebola/blob/master/analyses/README.md) file contains community-contributed analyses. If you have something to contribute, send a pull request or email.
 
 ## How to use
 
