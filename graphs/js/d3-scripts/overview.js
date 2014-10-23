@@ -6,12 +6,10 @@ $(document).ready(function () {
         dc.redrawAll();
     });
 
-    d3.csv("test-update2.csv", function (error, data) {
-        //var compositeChart = dc.compositeChart("#compositeChart");
-        var barCases = dc.barChart("#barCases");
-        var barDeaths = dc.barChart("#barDeaths");
+    d3.csv("test-update3.csv", function (error, data) {
         var casesDeathsChart = dc.compositeChart("#casesDeathsChart");
         var casesDeathsPieChart = dc.pieChart("#casesDeathsPieChart");
+        var cumulative = dc.compositeChart("#cumulative");
         var map = dc.geoChoroplethChart("#map");
         var datatable = dc.dataTable("#dc-data-table");
 
@@ -71,59 +69,32 @@ $(document).ready(function () {
           }
         });
 
+        var cumulativeCaseGroup = dayDimension.group().reduceSum( function (d) {
+          if (d.Type == "Cases") {
+            return d.TotalValue;
+          }
+          else {
+            return 0;
+          }
+        })
+        var cumulativeDeathsGroup = dayDimension.group().reduceSum( function (d) {
+          if (d.Type == "Deaths") {
+            return d.TotalValue;
+          }
+          else {
+            return 0;
+          }
+        })
+
         var minDay = dayDimension.bottom(1)[0].Date;
         var maxDay = dayDimension.top(1)[0].Date;
+
+          console.log(minDay + " - - - - " + maxDay);
 
         var height = 198;
 
         // d3.json("us-states.geojson", function (countriesJSON) {
          d3.json("locations.geojson", function (countriesJSON) {
-
-            //country bar chart
-            barCases
-                .width(400).height(300)
-                // .gap(100)
-                .dimension(countryDimension)
-                .group(casesCountryGroup)
-                .x(d3.scale.ordinal().domain(countryNameRange))
-                .xUnits(dc.units.ordinal)
-                .elasticY(true)
-                .renderHorizontalGridLines(true)
-                //.colors(['#555555'])
-                .valueAccessor(function (d) {
-                   console.log(d);
-                    return d.value;
-                });
-
-            barDeaths
-                .width(400).height(300)
-                // .gap(100)
-                .dimension(countryDimension)
-                .group(deathsCountryGroup)
-                .x(d3.scale.ordinal().domain(countryNameRange))
-                .xUnits(dc.units.ordinal)
-                .renderHorizontalGridLines(true)
-                .colors(['#990000'])
-                .valueAccessor(function (d) {
-                    return d.value;
-                });
-
-            // compositeChart
-                // .width(928).height(300)
-                //.dimension(countryDimension)
-                //.group(group)
-                // .elasticY(true)
-                // .x(d3.scale.ordinal().domain(countryNameRange))
-                // .xUnits(dc.units.ordinal)
-                // .renderHorizontalGridLines(true)
-                // .compose([countryCasesChart, countryDeathsChart])
-                // .brushOn(true);
-
-            // compositeChart
-                // .renderlet(function (chart) {
-                    // chart.selectAll("g._1").attr("transform", "translate(" + 24 + ", 0)");
-                    // chart.selectAll("g._0").attr("transform", "translate(" + -18 + ", 0)");
-                // });
 
             //case deaths pie
             casesDeathsPieChart
@@ -182,6 +153,28 @@ $(document).ready(function () {
                       .renderArea(false)
               ])
               .brushOn(false);
+
+          //cumulative case deaths over time
+          cumulative
+            .width(698).height(197)
+            .x(d3.time.scale().domain([minDay,maxDay]))
+            .yAxisLabel("Total")
+            .elasticY(true)
+            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+            .renderHorizontalGridLines(true)
+            .compose([
+                dc.lineChart(casesDeathsChart)
+                    .dimension(dayDimension)
+                    .colors('#990000')
+                    .renderArea(false)
+                    .group(cumulativeDeathsGroup, "Cumulative Deaths"),
+                dc.lineChart(casesDeathsChart)
+                    .dimension(dayDimension)
+                    .colors('#555555')
+                    .group(cumulativeCaseGroup, "Cumulative Cases")
+                    .renderArea(false)
+            ])
+            .brushOn(false);
 
 
             //data table

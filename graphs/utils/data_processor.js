@@ -4,7 +4,7 @@ var util = require("util");
 var fs = require("fs");
 
 var writeFile = true;
-var toFile = "test-update2.csv";
+var toFile = "test-update3.csv";
 
 var file = "country_timeseries.csv";
 var data = readFileIntoArray(file);
@@ -12,36 +12,39 @@ var data = readFileIntoArray(file);
 //util.puts(data);
 
 if (data.length > 0) {
-//  outputTable(data);
+  // outputTable(data);
 
-//    util.puts(" ");
-//    util.puts("Countries: ");
   var countries = getCountries(data);
-//    util.puts(countries);
-//    util.puts(" ");
 
   data = convertCumulativeDataToDailyNumbers(data);
-//  outputTable(data);
-
-//  data = covvertDailyNumbersToCumulative(data);
+ // outputTable(data);
 
   var newData = [];
-  newData.push(["Date", "Day", "Country", "Type", "Value"]);
+  newData.push(["Date", "Day", "Country", "Type", "Value", "TotalValue"]);
 
-//    util.puts(" ");
-//    util.puts("New Data: ");
-  for (var i = 1; i < data.length; i++) {
+   util.puts(" ");
+   util.puts("New Data: ");
+
+  var casesTotals = {};
+  var deathsTotals = {};
+
+  for (var i = 0; i < countries.length; i++) {
+    casesTotals[countries[i]] = 0;
+    deathsTotals[countries[i]] = 0;
+  }
+
+  for (var i = data.length - 1; i > 0; i--) {
     newData = newData.concat(convertDateRowToCountryRow(data[0], data[i]));
   }
-//    outputTable(newData);
-//    util.puts(" ");
+   outputTable(newData);
+   util.puts(" ");
 
 
-//  util.puts(" ");
-  //util.puts("String: ");
+ util.puts(" ");
+  util.puts("String: ");
   var string = convertArrayToCSVString(newData);
-  //util.puts(string);
-//  util.puts(" ");
+  util.puts(string);
+ util.puts(" ");
 
   util.puts(" ");
   if (writeFile) {
@@ -61,12 +64,15 @@ function readFileIntoArray(file) {
 
   for (var i = 0; i < rows.length; i++) {
     var row = rows[i].split(",");
-    for (var j = 0; j < row.length; j++) {
-      if (!row[j]) {
-        row[j] = 0;
+    if (row.length > 1) { //watch for empty line at end of file
+      for (var j = 0; j < row.length; j++) {
+        if (!row[j]) {
+          row[j] = 0;
+        }
       }
+      util.puts("Row " + i + ": " + row);
+      newRows.push(row);
     }
-    newRows.push(row);
   }
 
   return newRows;
@@ -136,7 +142,7 @@ function convertCumulativeDataToDailyNumbers(data) {
   return data;
 }
 
-function covvertDailyNumbersToCumulative(data) {
+function convertDailyNumbersToCumulative(data) {
 
   //leave the first and last row
   for (var i = data.length - 2; i > 0; i--) {
@@ -167,6 +173,9 @@ function convertDateRowToCountryRow(header, row) {
           newRow.push("Cases");
           newRow.push(row[j]);
 
+          casesTotals[countries[i]] += row[j];
+          newRow.push(casesTotals[countries[i]]);
+
           rows.push(newRow);
         }
         else if (headerValue.indexOf("Death") != -1) {
@@ -176,6 +185,9 @@ function convertDateRowToCountryRow(header, row) {
           newRow.push(countries[i]);
           newRow.push("Deaths");
           newRow.push(row[j]);
+
+          deathsTotals[countries[i]] += row[j];
+          newRow.push(deathsTotals[countries[i]]);
 
           rows.push(newRow);
         }
