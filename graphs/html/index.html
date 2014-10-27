@@ -5,21 +5,21 @@
 	<title>Ebola Graphs</title>
 
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../js/dc/dc.css">
+	<link rel="stylesheet" type="text/css" href="../js/dc.min.css">
   <link rel="stylesheet" type="text/css" href="../css/site.css">
 </head>
 
 <!--JQuery Scripts-->
-<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/jquery-2.1.1.min.js"></script>
 <script src="../js/jquery.csv-0.71.min.js"></script>
 
 <!--Charting Scripts-->
-<script src="../js/d3/d3.js"></script>
-<script src="../js/crossfilter/crossfilter.js"></script>
-<script src="../js/dc/dc.js"></script>
+<script src="../js/d3.min.js"></script>
+<script src="../js/crossfilter.min.js"></script>
+<script src="../js/dc.min.js"></script>
 
 <!--Specific Charts-->
-<script src="../js/d3-scripts/overview.js"></script>
+<script src="../js/overview.js"></script>
 <script type="text/javascript">
 
 		var data;
@@ -114,7 +114,11 @@
 			<div id="casesDeathsChart"></div>
 		</div>
 
-		<div class="col-md-12 chart cumulative-chart">
+		<div class="col-md-3 chart pie-chart">
+			<div id="casesDeathsBarChart"></div>
+		</div>
+
+		<div class="col-md-9 chart line-chart">
 			<div id="cumulative"></div>
 		</div>
 

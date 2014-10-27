@@ -36,8 +36,25 @@ cursor: pointer;
 
 .dc-chart g.row rect {
     stroke: #ccc;
-    fill-opacity: 0.8;
+    fill-opacity: 1;
     cursor: pointer;
+}
+
+.dc-chart g.row text {
+  fill: rgb(255, 255, 255);
+  margin-top: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dc-chart rect.deselected {
+  stroke: none;
+  fill: rgb(204, 204, 204);
+}
+
+.dc-chart .grid-line {
+  stroke: #000;
+  opacity: 0.5;
 }
 
 .dc-chart path.line {
