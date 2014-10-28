@@ -120,6 +120,6 @@ cursor: pointer;
   fill: #eee;
 }
 
-.stats {
-  width: 460px;
+#mortality {
+  margin-top: 62.5px;
 }

@@ -16,6 +16,8 @@ $(document).ready(function () {
         var map = dc.geoChoroplethChart("#map");
         var datatable = dc.dataTable("#dc-data-table");
 
+        var mortality = dc.numberDisplay("#mortality");
+
         var ndx = crossfilter(data);
         var all = ndx.groupAll();
 
@@ -36,6 +38,7 @@ $(document).ready(function () {
 
         var group = dayDimension.group();
         var typeGroup = typeDimension.group().reduceSum( function (d) {return d.Value });
+
         var casesGroup = dayDimension.group().reduceSum( function (d) {
             if (d.Type == "Cases") {
               return d.Value;
@@ -92,97 +95,124 @@ $(document).ready(function () {
         var minDay = dayDimension.bottom(1)[0].Date;
         var maxDay = dayDimension.top(1)[0].Date;
 
+        var caseCount = 0;
+        var deathCount = 0;
+
         var height = 198;
 
-         d3.json("locations.geojson", function (countriesJSON) {
+        d3.json("locations.geojson", function (countriesJSON) {
 
-            //case deaths pie
-            casesDeathsPieChart
-              .width(200).height(height)
-              .dimension(typeDimension)
-              .group(typeGroup)
-              .label(function (d) {
-                if (casesDeathsPieChart.hasFilter() && !casesDeathsPieChart.hasFilter(d.key)) {
-                    return d.key + " (0)";
-                }
-                else {
-                  var label = d.key;
-                  label += " (" + d.value + ")";
-                  return label;
-                }
-              })
-  //            .innerRadius(40);
-              .colors(d3.scale.ordinal().range(['#555555', '#990000']));
+        //mortality %
+        mortality
+          .valueAccessor(function(d) {
+            return deathCount / caseCount;
+          })
+          .html({
+            some:"<span style=\"color:#555555; font-size: 26px;\">Mortality: </span><br><span style=\"color:#990000; font-size: 46px;\">%number</span>",
+            none:"<span style=\"color:#555555; font-size: 26px;\">Mortality: </span><br><span style=\"color:#990000; font-size: 46px;\">Unknown</span>"
+          })
+          .formatNumber(d3.format("%"))
+          .group(typeGroup);
+
+          //case deaths pie
+          casesDeathsPieChart
+            .width(200).height(height)
+            .dimension(typeDimension)
+            .group(typeGroup)
+            .label(function (d) {
+              if (casesDeathsPieChart.hasFilter() && !casesDeathsPieChart.hasFilter(d.key)) {
+                  return d.key + " (0)";
+              }
+              else {
+                var label = d.key;
+                label += " (" + d.value + ")";
+                return label;
+              }
+            })
+            .colors(d3.scale.ordinal().range(['#555555', '#990000']));
+
+          //case deaths row chart
+          casesDeathsBarChart
+            .width(200).height(height)
+            .margins({top: 20, left: 10, right: 10, bottom: 20})
+            .dimension(typeDimension)
+            .group(typeGroup)
+            // .x(d3.scale.ordinal().domain(["Cases", "Deaths"]))
+            // .xUnits(dc.units.ordinal)
+            // .renderHorizontalGridLines(true)
+            .ordinalColors(['#555555', '#990000'])
+            // .elasticY(true);
+            .label(function (d) {
+              if (d.key == "Cases") {
+                caseCount = d.value;
+              }
+              else {
+                deathCount = d.value;
+              }
 
 
-            casesDeathsBarChart
-              .width(200).height(height)
-              .margins({top: 20, left: 10, right: 10, bottom: 20})
-              .dimension(typeDimension)
-              .group(typeGroup)
-              // .x(d3.scale.ordinal().domain(["Cases", "Deaths"]))
-              // .xUnits(dc.units.ordinal)
-              // .renderHorizontalGridLines(true)
-              .ordinalColors(['#555555', '#990000'])
-              // .elasticY(true);
-              .label(function (d) {
-                if (casesDeathsBarChart.hasFilter() && !casesDeathsBarChart.hasFilter(d.key)) {
-                    return d.key + " (0)";
-                }
-                else {
-                  var label = d.key;
-                  label += " (" + d.value + ")";
-                  return label;
-                }
-              })
-              .labelOffsetY(40)
-              // title sets the row text
-              .title(function (d) {
-                  return d.value;
-              })
-              .elasticX(true)
-              .xAxis().ticks(4);
+              if (casesDeathsBarChart.hasFilter() && !casesDeathsBarChart.hasFilter(d.key)) {
+                  return d.key + " (0)";
+              }
+              else {
+                var label = d.key;
+                label += " (" + d.value + ")";
+                return label;
+              }
+            })
+            .labelOffsetY(40)
+            // title sets the row text
+            .title(function (d) {
+                return d.value;
+            })
+            .elasticX(true)
+            .xAxis().ticks(4);
+
+          //map
+          map
+            .width(938).height(500)
+            .dimension(countryDimension)
+            .group(countryGroup)
+            .projection(d3.geo.mercator()
+              .scale((800) / Math.PI)
+              .center([-25, 16]))
+            .colors(d3.scale.quantize().range(["#CCCCCC", "#BBBBBB", "#AAAAAA", "#999999", "#888888", "#777777", "#666666", "#555555", "#444444", "#333333"]))
+            .colorDomain([0, 200])
+            .colorCalculator(function (d) { return d ? map.colors()(d) : '#fff'; })
+            .overlayGeoJson(countriesJSON.features, "country", function (d) {
+                return d.properties.NAME;
+            })
+            .title(function (d) {
+               return "Country: " + d.key + "\nCount: " + d.value;
+            })
+            .on("filtered", function(chart, filter){
+              console.log("Filtered chart:");
+              caseCount = 0;
+              deathCount = 0;
+            });
 
 
-            //map
-            map
-              .width(938).height(500)
-              .dimension(countryDimension)
-              .group(countryGroup)
-              .projection(d3.geo.mercator()
-                .scale((800) / Math.PI)
-                .center([-25, 16]))
-              .colors(d3.scale.quantize().range(["#CCCCCC", "#BBBBBB", "#AAAAAA", "#999999", "#888888", "#777777", "#666666", "#555555", "#444444", "#333333"]))
-              .colorDomain([0, 200])
-              .colorCalculator(function (d) { return d ? map.colors()(d) : '#fff'; })
-              .overlayGeoJson(countriesJSON.features, "country", function (d) {
-                  return d.properties.NAME;
-              })
-             .title(function (d) {
-                 return "Country: " + d.key + "\nCount: " + d.value;
-             });
-
-            //case deaths over time
-            casesDeathsChart
-              .width(698).height(197)
-              .x(d3.time.scale().domain([minDay,maxDay]))
-              .yAxisLabel("Total")
-              .elasticY(true)
-              .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
-              .renderHorizontalGridLines(true)
-              .compose([
-                  dc.lineChart(casesDeathsChart)
-                      .dimension(dayDimension)
-                      .colors('#990000')
-                      .renderArea(false)
-                      .group(deathsGroup, "Deaths Per Day"),
-                  dc.lineChart(casesDeathsChart)
-                      .dimension(dayDimension)
-                      .colors('#555555')
-                      .group(casesGroup, "Cases Per Day")
-                      .renderArea(false)
-              ])
-              .brushOn(false);
+          //case deaths over time
+          casesDeathsChart
+            .width(698).height(197)
+            .x(d3.time.scale().domain([minDay,maxDay]))
+            .yAxisLabel("Total")
+            .elasticY(true)
+            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+            .renderHorizontalGridLines(true)
+            .compose([
+                dc.lineChart(casesDeathsChart)
+                    .dimension(dayDimension)
+                    .colors('#990000')
+                    .renderArea(false)
+                    .group(deathsGroup, "Deaths Per Day"),
+                dc.lineChart(casesDeathsChart)
+                    .dimension(dayDimension)
+                    .colors('#555555')
+                    .group(casesGroup, "Cases Per Day")
+                    .renderArea(false)
+            ])
+            .brushOn(false);
 
           //cumulative case deaths over time
           cumulative
@@ -220,6 +250,9 @@ $(document).ready(function () {
               ]);
 
         dc.renderAll();
+        d3.selectAll(".dc-chart").on("filtered", function(chart, filter){
+          console.log("Filtered");
+        })
 
       });
     });
