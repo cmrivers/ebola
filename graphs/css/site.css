@@ -1,0 +1,126 @@
+body {
+  margin: 10px;
+  font: 10px sans-serif;
+}
+
+.content {
+  width: 930px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0px;
+}
+
+#reset {
+  margin-top: 3px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#bar-chart {
+  overflow: scroll;
+}
+
+.dc-chart g.row text {
+fill: #555555;
+font-size: 12px;
+cursor: pointer;
+}
+
+.dc-chart rect.bar {
+    stroke: #ccc;
+    cursor: pointer;
+}
+
+.dc-chart g.row rect {
+    stroke: #ccc;
+    fill-opacity: 1;
+    cursor: pointer;
+}
+
+.dc-chart g.row text {
+  fill: rgb(255, 255, 255);
+  margin-top: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dc-chart rect.deselected {
+  stroke: none;
+  fill: rgb(204, 204, 204);
+}
+
+.dc-chart .grid-line {
+  stroke: #000;
+  opacity: 0.5;
+}
+
+.dc-chart path.line {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+.dc-chart path.area {
+    fill: #555555;
+    fill-opacity: .1;
+    stroke: none;
+}
+
+.dc-chart .pie-slice {
+    fill: white;
+    font-size: 12px;
+    cursor: pointer;
+    stroke: #555;
+}
+
+.dc-chart .empty-chart .pie-slice path {
+  fill: #ddd;
+}
+
+.dc-chart text.pie-slice{
+  stroke-width: 0px !important;
+}
+
+.chart {
+  background-color: whitesmoke;
+  border: solid grey 1px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 0px;
+}
+
+.pie-chart {
+  width: 220px;
+  height: 220px;
+  padding: 10px !important;
+}
+
+.line-chart {
+  width: 700px;
+  padding: 10px !important;
+  margin-right: 0px;
+}
+
+.map-chart {
+  width: 930px;
+}
+
+#map path {
+  stroke: #ccc !important;
+  stroke-width: .5px;
+}
+
+#map .deselected path{
+  fill: #eee;
+}
+
+#mortality {
+  margin-top: 62.5px;
+}
