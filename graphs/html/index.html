@@ -1,155 +1,73 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Ebola Graphs</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Ebola Graphs</title>
 
-  <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../js/dc.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/site.css">
-</head>
+	  <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../js/dc.min.css">
+	  <link rel="stylesheet" type="text/css" href="../css/site.css">
+	</head>
 
-<!--JQuery Scripts-->
-<script src="../js/jquery-2.1.1.min.js"></script>
-<script src="../js/jquery.csv-0.71.min.js"></script>
+	<!--JQuery Scripts-->
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/jquery.csv-0.71.min.js"></script>
 
-<!--Charting Scripts-->
-<script src="../js/d3.min.js"></script>
-<script src="../js/crossfilter.min.js"></script>
-<script src="../js/dc.min.js"></script>
+	<!--Charting Scripts-->
+	<script src="../js/d3.min.js"></script>
+	<script src="../js/crossfilter.min.js"></script>
+	<script src="../js/dc.min.js"></script>
 
-<!--Specific Charts-->
-<script src="../js/overview.js"></script>
-<script type="text/javascript">
+	<!--Chart-->
+	<script src="../js/overview.js"></script>
 
-		var data;
-		function fixData(data) {
-			var newData = [];
-
-			for (var i = 0; i < data.length; i++) {
-				var row = [];
-				for (var j = 0; j < data[i].length; j++) {
-					var d = data[i][j];
-
-					//if d is blank, look back for older data
-					if (d == "") {
-						var newI = i + 1;
-						var newD = "";
-						while (newD == "" && newI < data.length) {
-							newD = data[newI][j];
-							newI += 1;
-						}
-						d = newD;
-					}
-					row.push(d);
-				}
-				newData.push(row);
-			}
-
-			return newData;
-		}
-
-		function createTable(data) {
-			var doc = document;
-
-			var fragment = doc.createDocumentFragment();
-
-			var thead = doc.createElement("thead");
-			var thr = doc.createElement("tr");
-
-			for (j = 0; j < data[0].length; j++) {
-				var th = doc.createElement("th");
-				th.innerHTML = data[0][j];
-				thr.appendChild(th);
-			}
-			thead.appendChild(thr);
-			fragment.appendChild(thead);
-
-			var tbody = doc.createElement("tbody")
-			for (i = 1; i < data.length; i++) {
-			    var tr = doc.createElement("tr");
-
-					for (j = 0; j < data[i].length; j++) {
-				    var td = doc.createElement("td");
-				    td.innerHTML = data[i][j];
-
-						if (data[i][j] == "Cases") {
-							tr.className = "success";
-						}
-						else if (data[i][j] == "Deaths") {
-							tr.className = "danger";
-						}
-
-				    tr.appendChild(td);
-					}
-			    //does not trigger reflow
-			    tbody.appendChild(tr);
-			}
-
-			fragment.appendChild(tbody);
-
-			$("#table").append(fragment);
-		}
-</script>
-
-<body>
-  <div class="well">
-		<div class="row">
-    	<div class="col-md-10">
-				<h4>Ebola Graphs</h4>
+	<body>
+	  <div class="well">
+			<div class="row">
+	    	<div class="col-md-10">
+					<h4>Ebola Graphs</h4>
+				</div>
+				<div class="col-md-2">
+					<button id="reset" class="btn btn-warning pull-right">Reset All Graphs</button>
+				</div>
 			</div>
-			<div class="col-md-2">
-				<button id="reset" class="btn btn-warning pull-right">Reset All Graphs</button>
+	  </div>
+
+		<div id="graphs" class="row">
+
+			<div class="col-md-3 chart pie-chart">
+				<div id="casesDeathsRowChart"></div>
+			</div>
+
+			<div class="col-md-9 chart line-chart">
+				<div id="cumulative"></div>
+			</div>
+
+			<div class="col-md-3 chart pie-chart">
+				<p id="mortality" />
+			</div>
+
+			<div class="col-md-9 chart line-chart">
+				<div id="casesDeathsChart"></div>
+			</div>
+
+			<div class="col-md-12 chart map-chart">
+				<div id="map"></div>
+			</div>
+
+			<div class="col-md-12">
+				<table id="dc-data-table" class="table table-bordered table-striped">
+					<thead>
+					<tr class="header">
+						<th>Day
+						<th>Country</th>
+						<th>Type</th>
+						<th>Value</th>
+						<th>Total</th>
+					</tr>
+					</thead>
+				</table>
 			</div>
 		</div>
-  </div>
-
-	<div id="graphs" class="row">
-
-		<div class="col-md-3 chart pie-chart">
-			<div id="casesDeathsBarChart"></div>
-		</div>
-
-		<div class="col-md-9 chart line-chart">
-			<div id="cumulative"></div>
-		</div>
-
-		<div class="col-md-3 chart pie-chart">
-			<p id="mortality" />
-			<!--
-			<div id="casesDeathsPieChart"></div>
-			-->
-		</div>
-
-		<div class="col-md-9 chart line-chart">
-			<div id="casesDeathsChart"></div>
-		</div>
-
-		<div class="col-md-12 chart map-chart">
-			<div id="map"></div>
-		</div>
-
-		<div class="col-md-12">
-			<table id="dc-data-table" class="table table-bordered table-striped">
-				<thead>
-				<tr class="header">
-					<th>Day
-					<th>Country</th>
-					<th>Type</th>
-					<th>Value</th>
-				</tr>
-				</thead>
-			</table>
-		</div>
-
-		<div class="col-md-12">
-			<table id="table" class="table table-bordered">
-			</table>
-		</div>
-
-	</div>
-
-
-
-</body>
+	</body>
 </html>
