@@ -4,26 +4,17 @@ var util = require("util");
 var fs = require("fs");
 
 var writeFile = true;
-var toFile = "test-update3.csv";
+var toFile = "../html/graph_data.csv";
 
-var file = "country_timeseries.csv";
+var file = "../../country_timeseries.csv";
 var data = readFileIntoArray(file);
 
-//util.puts(data);
-
 if (data.length > 0) {
-  // outputTable(data);
-
   var countries = getCountries(data);
-
   data = convertCumulativeDataToDailyNumbers(data);
- // outputTable(data);
 
   var newData = [];
   newData.push(["Date", "Day", "Country", "Type", "Value", "TotalValue"]);
-
-   util.puts(" ");
-   util.puts("New Data: ");
 
   var casesTotals = {};
   var deathsTotals = {};
@@ -36,17 +27,9 @@ if (data.length > 0) {
   for (var i = data.length - 1; i > 0; i--) {
     newData = newData.concat(convertDateRowToCountryRow(data[0], data[i]));
   }
-   outputTable(newData);
-   util.puts(" ");
 
-
- util.puts(" ");
-  util.puts("String: ");
   var string = convertArrayToCSVString(newData);
-  util.puts(string);
- util.puts(" ");
 
-  util.puts(" ");
   if (writeFile) {
     util.puts("Writing data to file: " + toFile);
     fs.writeFile(toFile, string);
@@ -56,6 +39,7 @@ if (data.length > 0) {
   }
 }
 
+//functions
 function readFileIntoArray(file) {
   var newRows = [];
 
@@ -70,7 +54,6 @@ function readFileIntoArray(file) {
           row[j] = 0;
         }
       }
-      util.puts("Row " + i + ": " + row);
       newRows.push(row);
     }
   }
@@ -157,7 +140,10 @@ function convertDailyNumbersToCumulative(data) {
 function convertDateRowToCountryRow(header, row) {
   var rows = [];
 
-  var date = row[0];
+  // make sure the date is in the correct format
+  var newDate = new Date(row[0]);
+  var date = ((newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear());
+
   var day = row[1];
 
   for (var i = 0; i < countries.length; i++) {
@@ -197,7 +183,6 @@ function convertDateRowToCountryRow(header, row) {
 
   return rows;
 }
-
 
 function getCountries(data) {
   var countries = [];

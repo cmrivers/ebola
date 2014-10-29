@@ -1,12 +1,10 @@
 $(document).ready(function () {
-    var chartGroup = "overviewGroup";
-
     $('#reset').click(function () {
         dc.filterAll();
         dc.redrawAll();
     });
 
-    d3.csv("test-update3.csv", function (error, data) {
+    d3.csv("graph_data.csv", function (error, data) {
 
         //define charts
         var casesDeathsChart = dc.compositeChart("#casesDeathsChart"),
@@ -111,7 +109,7 @@ $(document).ready(function () {
 
           //map
           map
-            .width(938).height(500)
+            .width(928).height(500)
             .dimension(countryDimension)
             .group(countryGroup)
             .projection(d3.geo.mercator()
