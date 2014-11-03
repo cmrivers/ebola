@@ -29,11 +29,11 @@ Date,Variable,National,Bomi county,Bong County,Gbarpolu County,Grand Bassa,Grand
 10/24/2014,New Case/s (Suspected),23,,3,0,0,0,0,0,0,1,0,19,0,0,0,0
 10/24/2014,New Case/s (Probable),12,,0,0,0,0,0,0,0,1,0,11,0,0,0,0
 10/24/2014,New case/s (confirmed),0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-10/24/2014,Total suspected cases,75,161,6,36,28,2,12,168,347,10,1480,82,7,5,10,2429
-10/24/2014,Total probable cases,38,35,2,69,9,0,13,151,493,2,672,100,4,1,3,1592
-10/24/2014,Total confirmed cases,60,69,4,16,22,2,2,304,279,2,1349,98,7,4,14,2232
+10/24/2014,Total suspected cases,2429,75,161,6,36,28,2,12,168,347,10,1480,82,7,5,10
+10/24/2014,Total probable cases,1592,,38,35,2,69,9,0,13,151,493,2,672,100,4,1,3
+10/24/2014,Total confirmed cases,2232,60,69,4,16,22,2,2,304,279,2,1349,98,7,4,14
 10/24/2014,"Total Number of Confirmed Cases 
  of Sierra Leonean Nationality",,,,,,,,,,,,,,,,
 10/24/2014,"Total Number of Confirmed Cases 
  of Guinean Nationality",,,,,,,,,,,,,,,,
-10/24/2014,"Cumulative confirmed, probable and suspected cases",173,265,12,121,59,4,27,623,1119,14,3501,280,18,10,27,6253
+10/24/2014,"Cumulative confirmed, probable and suspected cases",6253,173,265,12,121,59,4,27,623,1119,14,3501,280,18,10,27
