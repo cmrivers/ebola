@@ -1,0 +1,108 @@
+country,name
+Guinea,New cases of suspects
+Guinea,New cases of probables
+Guinea,New cases of confirmed
+Guinea,Total new cases registered so far
+Guinea,Total cases of suspects
+Guinea,Total cases of probables
+Guinea,Total cases of confirmed
+Guinea,Cumulative (confirmed + probable + suspects)
+Guinea,Total suspected non-class cases
+Guinea,New deaths registered
+Guinea,Total deaths of suspects
+Guinea,Total deaths of probables
+Guinea,Total deaths of confirmed
+Guinea,Total deaths (confirmed + probables + suspects)
+Guinea,Fatality rate for confirmed and probables
+Guinea,New cases of confirmed among health workers
+Guinea,Total case of confirmed among health workers
+Guinea,New deaths registered among health workers
+Guinea,Total deaths registered among health workers
+Guinea,New admits to CTE so far
+Guinea,Total number of hospitalized cases in CTE
+Guinea,Total number of exits from CTE
+Guinea,Total number of admissions to CTE
+Guinea,New contacts registered so far
+Guinea,Total contacts registered from start date
+Guinea,Number of contacts to follow today
+Guinea,Number of contacts followed today
+Guinea,Number of contacts out of the track 21 days
+Guinea,Number of contacts lost to follow up
+Guinea,Number of samples collected today
+Guinea,Number of samples under test
+Guinea,Total samples tested
+Liberia,Specimens collected
+Liberia,Specimens pending for testing
+Liberia,Total specimens tested
+Liberia,Newly reported deaths
+Liberia,Total death/s in confirmed cases
+Liberia,Total death/s in probable cases
+Liberia,Total death/s in suspected cases
+Liberia,"Total death/s in confirmed, probable, suspected cases"
+Liberia,Case Fatality Rate (CFR) - Confirmed & Probable Cases
+Liberia,Newly reported contacts
+Liberia,Total contacts listed
+Liberia,Currently under follow-up
+Liberia,Contacts seen
+Liberia,Contacts who completed 21 day follow-up
+Liberia,Contacts lost to follow-up
+Liberia,New admissions
+Liberia,Total no. currently in Treatment Units
+Liberia,Total discharges
+Liberia,Cumulative admission/isolation
+Liberia,Newly Reported Cases in HCW
+Liberia,Cumulative cases among HCW
+Liberia,Newly Reported deaths in HCW
+Liberia,Cumulative deaths among HCW
+Liberia,New Case/s (Suspected)
+Liberia,New Case/s (Probable)
+Liberia,New case/s (confirmed)
+Liberia,Total suspected cases
+Liberia,Total probable cases
+Liberia,Total confirmed cases
+Liberia,Total Number of Confirmed Cases of Sierra Leonean Nationality
+Liberia,Total Number of Confirmed Cases of Guinean Nationality
+Sierra Leone,population
+Sierra Leone,new_noncase
+Sierra Leone,new_suspected
+Sierra Leone,new_probable
+Sierra Leone,new_confirmed
+Sierra Leone,cum_noncase
+Sierra Leone,cum_suspected
+Sierra Leone,cum_probable
+Sierra Leone,cum_confirmed
+Sierra Leone,death_suspected
+Sierra Leone,death_probable
+Sierra Leone,death_confirmed
+Sierra Leone,cfr
+Sierra Leone,etc_new_admission
+Sierra Leone,etc_currently_admitted
+Sierra Leone,etc_cum_admission
+Sierra Leone,etc_new_deaths
+Sierra Leone,etc_cum_deaths
+Sierra Leone,etc_new_discharges
+Sierra Leone,etc_cum_discharges
+Sierra Leone,cum_contacts
+Sierra Leone,cum_completed_contacts
+Sierra Leone,contacts_followed
+Sierra Leone,new_contacts
+Sierra Leone,contacts_healthy
+Sierra Leone,contacts_ill
+Sierra Leone,contacts_not_seen
+Sierra Leone,new_completed_contacts
+Sierra Leone,percent_seen
+DRC,Number of registered cases
+DRC,Laboratory confirmed cases
+DRC,Probable cases
+DRC,Suspected cases
+DRC,Number of deaths
+DRC,Number of ill health personnel
+DRC,Number of deaths - health personnel
+DRC,Number of hospitalized people (in isolation)
+DRC,Contacts requiring follow-up
+DRC,Contacts seen to date
+DRC,Contacts discarded from follow-up after 21 days
+DRC,Number of lost contacts
+DRC,Number of samples analyzed
+DRC,Case Fatality Rate (CFR) - Confirmed - probable - suspected cases (%)
+DRC,Contacts recorded to date

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Ebola Graphs</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	  <link rel="stylesheet" type="text/css" href="../js/dc.css">
+	  <link rel="stylesheet" type="text/css" href="../css/site.css">
+	</head>
+
+	<!--JQuery Scripts-->
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script src="../js/jquery.csv-0.71.min.js"></script>
+
+	<!--Charting Scripts-->
+	<script src="../js/d3.min.js"></script>
+	<script src="../js/crossfilter.min.js"></script>
+	<script src="../js/dc.min.js"></script>
+
+	<!--Chart-->
+	<script src="../js/overview.js"></script>
+
+	<body>
+		<div class="content">
+		  <div class="well">
+				<div class="row">
+		    	<div class="col-md-10">
+						<h4>Ebola Graphs</h4>
+					</div>
+					<div class="col-md-2">
+						<button id="reset" class="btn btn-warning pull-right">Reset All Graphs</button>
+					</div>
+				</div>
+		  </div>
+
+			<div id="graphs" class="row">
+
+				<div class="col-md-3 chart pie-chart">
+					<div id="casesDeathsRowChart"></div>
+				</div>
+
+				<div class="col-md-9 chart line-chart">
+					<div id="cumulative"></div>
+				</div>
+
+				<div class="col-md-3 chart pie-chart">
+					<p id="mortality" />
+				</div>
+
+				<div class="col-md-9 chart line-chart">
+					<div id="casesDeathsChart"></div>
+				</div>
+
+				<div class="col-md-12 chart map-chart">
+					<div id="map"></div>
+				</div>
+
+			</div>
+				<hr class="featurette-divider">
+
+			<div class="row">
+				<div class="col-md-12">
+					<table id="dc-data-table" class="table table-bordered table-striped">
+						<thead>
+						<tr class="header">
+							<th>Day
+							<th>Country</th>
+							<th>Type</th>
+							<th>Value</th>
+							<th>Total</th>
+						</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
