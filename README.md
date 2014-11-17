@@ -10,7 +10,7 @@ Datamarket has made these data available through their API [here](https://datama
 * `country_timeseries.csv` contains a time series of case counts and deaths is from the [World Health Organization](http://www.who.int/csr/don/en/) and [WHO situation reports](http://www.who.int/csr/disease/ebola/situation-reports/en/).
 * `liberia_data/` contains .csv files of data provided by the [Liberia Ministry of Health](http://www.mohsw.gov.lr/content_display.php?sub=report2). I have noticed the data are somewhat inconsistent. Cross-check the data when analyzing.
 * `sl_data/` contains .csv files of data provided by the [Sierra Leone Ministry of Health](http://health.gov.sl/?page_id=583)
-* `guinea_data/` contains a mix of .csv and PDF files from the Guinea Ministry of Health. These data are not available online, so I will keep the PDFs in the repo for reference.
+* `guinea_data/` contains a mix of .csv and PDF files from the [Guinea Ministry of Health](http://actuconakry.com/wp-content/uploads/2014/10/). These data are not consistently available online, so I will keep the PDFs in the repo for reference.
 * `mali_data/` contains a mix of .csv and PDF files from the [Mali Ministry of Health](http://www.sante.gov.ml/). 
 * `who_data` contains data from the [WHO](http://apps.who.int/gho/data/node.ebola-sitrep) that compare sitrep case counts with patient database counts for select cities and countries.
 * `data_products` contains analyses, processing scripts, etc. Highlights include:
