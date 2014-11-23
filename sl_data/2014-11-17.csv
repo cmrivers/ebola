@@ -3,11 +3,11 @@ date,variable,Kailahun,Kenema,Kono,Kambia,Koinadugu,Bombali,Tonkolili,Port Loko,
 2014-11-17,new_noncase,,,,,,,,,,,,,,,
 2014-11-17,new_suspected,,,,,,,,,,,,,,,
 2014-11-17,new_probable,,,,,,,,,,,,,,,
-2014-11-17,new_confirmed,1,0,0,1,0,12,2,9,0,2,3,0,35,24,89
+2014-11-17,new_confirmed,0,0,5,0,2,2,0,18,0,3,2,0,15,6,53
 2014-11-17,cum_noncase,,,,,,,,,,,,,,,
-2014-11-17,cum_suspected,,,,,,,,,,,,,,,938
+2014-11-17,cum_suspected,,,,,,,,,,,,,,,949
 2014-11-17,cum_probable,,,,,,,,,,,,,,,79
-2014-11-17,cum_confirmed,559,493,57,57,73,709,302,720,28,222,147,3,975,711,5056
+2014-11-17,cum_confirmed,559,493,62,57,75,711,302,738,28,225,149,3,990,717,5109
 2014-11-17,death_suspected,,,,,,,,,,,,,,,157
 2014-11-17,death_probable,,,,,,,,,,,,,,,208
 2014-11-17,death_confirmed,,,,,,,,,,,,,,,1223
