@@ -2,7 +2,11 @@ Data for the 2014 Global Ebola outbeak
 =====
 
 ## Announcements
-Datamarket has made these data available through their API [here](https://datamarket.com/data/list/?q=ebola&ref=search). Their website also has interactive visualizations, and allows export to other file formats. As you browse the data on their site, please take note of possible errors, for example when cumulative counts temporarily drop. **Please be aggressive about identifying and correcting these errors through pull requests, so we can improve our data quality.** 
+Datamarket has made these data available through their API [here](https://datamarket.com/data/list/?q=ebola&ref=search). Their website also has interactive visualizations, and allows export to other file formats. As you browse the data on their site, please take note of possible errors, for example when cumulative counts temporarily drop. **Please be aggressive about identifying and correcting these errors through pull requests, so we can improve our data quality.**
+
+The DataMarket API is documented [here](https://datamarket.com/api/v1/). To access it programmatically you need a sharing key, which you can find in the file 'datamarket_sharingkey.txt'
+
+
 
 
 ## Contents
@@ -11,7 +15,7 @@ Datamarket has made these data available through their API [here](https://datama
 * `liberia_data/` contains .csv files of data provided by the [Liberia Ministry of Health](http://www.mohsw.gov.lr/content_display.php?sub=report2). I have noticed the data are somewhat inconsistent. Cross-check the data when analyzing.
 * `sl_data/` contains .csv files of data provided by the [Sierra Leone Ministry of Health](http://health.gov.sl/?page_id=583)
 * `guinea_data/` contains a mix of .csv and PDF files from the [Guinea Ministry of Health](http://actuconakry.com/wp-content/uploads/2014/10/). These data are not consistently available online, so I will keep the PDFs in the repo for reference.
-* `mali_data/` contains a mix of .csv and PDF files from the [Mali Ministry of Health](http://www.sante.gov.ml/). 
+* `mali_data/` contains a mix of .csv and PDF files from the [Mali Ministry of Health](http://www.sante.gov.ml/).
 * `who_data/` contains data from the [WHO](http://apps.who.int/gho/data/node.ebola-sitrep) that compare sitrep case counts with patient database counts for select cities and countries.
 * `data_products/` contains analyses, processing scripts, etc. Highlights include:
   * `liberia_data.py` converts the liberia_data csv files into a multidimensional pandas dataframe. Pandas is a requirement for this script. Optional argument allows output to .csv. You can run this script with ./liberia_data.py --help to learn more.
