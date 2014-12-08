@@ -6,7 +6,7 @@ node_modules
 *.swp
 # C extensions
 *.so
-
+*.DS_*
 *Icon* 
 *.gsheet
 # Distribution / packaging
