@@ -1,13 +1,12 @@
 Data for the 2014 Global Ebola outbeak
 =====
+## Overview
+This repository contains digitized situation reports from the countries affected by the 2014 Ebola virus disease outbreak. Data are usually updated weekly. If you would like to contribute, data entry templates are available in each country's subfolder.
 
 ## Announcements
 Datamarket has made these data available through their API [here](https://datamarket.com/data/list/?q=ebola&ref=search). Their website also has interactive visualizations, and allows export to other file formats. As you browse the data on their site, please take note of possible errors, for example when cumulative counts temporarily drop. **Please be aggressive about identifying and correcting these errors through pull requests, so we can improve our data quality.**
 
 The DataMarket API is documented [here](https://datamarket.com/api/v1/). To access it programmatically you need a sharing key, which you can find in the file 'datamarket_sharingkey.txt'
-
-
-
 
 ## Contents
 
@@ -29,7 +28,7 @@ If you are not familiar with Github, click the Download Zip button on the right,
 
 ## Disclaimer
 
-I cannot guarantee the accuracy of this data. These data are digitized by hand, so there may be data entry errors; there may also be changes and errors in the source data. I will provide updates when possible.
+I cannot guarantee the accuracy of this data. These data are digitized by hand (and sometimes with Tabula) so there may be data entry errors; there may also be changes and errors in the source data. I will provide updates when possible.
 
 **Pull requests welcome.**
 
@@ -39,6 +38,6 @@ I am **Caitlin Rivers**, a grad student in computational epidemiology at the [Ne
 * cmrivers@vbi.vt.edu
 * [@cmyeaton](https://twitter.com/cmyeaton)
 
-*Please note*: I receive numerous requests every day for customized versions of these data. While I appreciate that these data are in demand and am glad they are useful to you, I simply do not have time to provide customized versions.
+*Please note*: I receive numerous requests for customized versions of these data. If you are interested in purchasing different formats, send me an email.
 
 
