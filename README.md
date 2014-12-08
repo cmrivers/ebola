@@ -8,7 +8,7 @@ Creating and maintaining this database has required and continues to require an 
 I will continue to publish data for free to this repository. However, the data will only become available here two weeks after publication. Newer data (no more than two days behind) will be hosted on a private repository. You can gain access to the new data one of two ways:
 
 * Digitize three Ebola situation reports. Check the folders in the `DATA_ENTRY/` folder. Fill out the template with data from the corresponding PDF. You must do this for three PDFs. Email the files (cmrivers@vbi.vt.edu) or send me github/google drive links.
-* Pay a [one-time fee of [$1000](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E65JEGJUSZD7S) for permanent access.
+* Pay a [one-time fee of $100](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E65JEGJUSZD7S) for permanent access.
 
 **Make sure I have your github username.** Please note that Sierra Leone and Liberia are the only two countries (in addition to the WHO) that regularly publish situation reports, so they are the only countries for which regular data will be available on the private repo.
 
