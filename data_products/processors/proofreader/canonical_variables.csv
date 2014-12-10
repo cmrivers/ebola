@@ -1,7 +1,10 @@
 country,name
 Guinea,New cases of suspects
+Guinea, (Social) Education level of New cases of suspects
 Guinea,New cases of probables
+Guinea, (Social) Education level of New cases of probables
 Guinea,New cases of confirmed
+Guinea, (Social) Education level of New cases of confirmed
 Guinea,Total new cases registered so far
 Guinea,Total cases of suspects
 Guinea,Total cases of probables
@@ -55,8 +58,11 @@ Liberia,Cumulative cases among HCW
 Liberia,Newly Reported deaths in HCW
 Liberia,Cumulative deaths among HCW
 Liberia,New Case/s (Suspected)
+Liberia, (Social) Education level New Case/s (Suspected)
 Liberia,New Case/s (Probable)
+Liberia, (Social) Education level New Case/s (Probable)
 Liberia,New case/s (confirmed)
+Liberia, (Social) Education level New case/s (confirmed)
 Liberia,Total suspected cases
 Liberia,Total probable cases
 Liberia,Total confirmed cases
@@ -64,9 +70,13 @@ Liberia,Total Number of Confirmed Cases of Sierra Leonean Nationality
 Liberia,Total Number of Confirmed Cases of Guinean Nationality
 Sierra Leone,population
 Sierra Leone,new_noncase
+Sierra Leone, Social Education level new_noncase
 Sierra Leone,new_suspected
+Sierra Leone, (Social) Education level new_suspected
 Sierra Leone,new_probable
+Sierra Leone, (Social) Education level new_probable
 Sierra Leone,new_confirmed
+Sierra Leone, (Social) Education level new_confirmed
 Sierra Leone,cum_noncase
 Sierra Leone,cum_suspected
 Sierra Leone,cum_probable
@@ -92,9 +102,13 @@ Sierra Leone,contacts_not_seen
 Sierra Leone,new_completed_contacts
 Sierra Leone,percent_seen
 DRC,Number of registered cases
+DRC, (Social) Education level of Number of registered cases
 DRC,Laboratory confirmed cases
+DRC, (Social) Education level of Laboratory confirmed cases
 DRC,Probable cases
+DRC, (Social) Education level of Probable cases
 DRC,Suspected cases
+DRC, (Social) Education level of Suspected cases
 DRC,Number of deaths
 DRC,Number of ill health personnel
 DRC,Number of deaths - health personnel
