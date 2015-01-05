@@ -4,6 +4,8 @@ Data for the 2014 Global Ebola outbeak
 ## Announcements
 As of Dec 15, 2015, I will no longer be updating the data. Pull requests will be accepted.
 
+Please refer to Brian Rowe's [R package](https://github.com/muxspace/ebola.sitrep) for scraping Liberia's sitreps.
+
 ## Contents
 
 Datamarket has made these data available through their API [here](https://datamarket.com/data/list/?q=ebola&ref=search). The DataMarket API is documented [here](https://datamarket.com/api/v1/). To access it programmatically you need a sharing key, which you can find in the file 'datamarket_sharingkey.txt'
