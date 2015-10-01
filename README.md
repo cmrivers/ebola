@@ -34,6 +34,6 @@ I am **Caitlin Rivers**, a computational epidemiologist, formerly of [Network Dy
 * cmrivers@vbi.vt.edu
 * [@cmyeaton](https://twitter.com/cmyeaton)
 
-*Please note*: I receive numerous requests for customized versions of these data. I am not able to accomodate these requests.
+*Please note*: I receive numerous requests for customized versions of these data. I am not able to accommodate these requests.
 
 
